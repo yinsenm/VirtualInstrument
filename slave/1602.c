@@ -41,12 +41,12 @@ void LCD_Write_Com(unsigned char com){
 /*
 	Func: 写入数据
 */
-void LCD_Write_Data(unsigned char data){
+void LCD_Write_Data(unsigned char _data){
 	while(LCD_Check_Busy());
 	RS = 1;
 	RW = 0;
 	EN = 1;
-	DataPort = data;
+	DataPort = _data;
 	_nop_();
 	EN = 0;
 }

@@ -12,7 +12,7 @@ bit LCD_Check_Busy();
 
 void LCD_Write_Com(unsigned char com);
 
-void LCD_Write_Data(unsigned char data);
+void LCD_Write_Data(unsigned char _data);
 
 void LCD_Clear();
 
