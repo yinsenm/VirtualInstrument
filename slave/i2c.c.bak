@@ -214,7 +214,7 @@ bit IRcvStr(unsigned char sla, unsigned char suba, unsigned char *s, unsigned ch
   		s++;
     } 
    	*s=RcvByte();
-    No_Ack_I2C();                   //发送非应位
-    Stop_I2C();                    //结束总线
+    NoAck_I2C();                   //发送非应位
+    Stop_I2c();                    //结束总线
   	return 1;
 }

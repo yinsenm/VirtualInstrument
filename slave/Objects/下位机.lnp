@@ -1,0 +1,9 @@
+".\Objects\1602.obj",
+".\Objects\i2c.obj",
+".\Objects\main.obj",
+".\Objects\delay.obj",
+".\Objects\tm7705.obj",
+".\Objects\uart.obj",
+".\Objects\bsp_prinf.obj" 
+TO ".\Objects\下位机" 
+PRINT(".\Listings\下位机.m51") RAMSIZE(256) 

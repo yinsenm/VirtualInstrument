@@ -86,9 +86,9 @@ void LCD_Write_Str(unsigned char x, unsigned char y, unsigned char *str){
 	else{
 		LCD_Write_Com(0xC0 + x);
 	}
-	while(*str){
-		LCD_Write_Data(*str);
-		str++;
+	while(*s){
+		LCD_Write_Data(*s);
+		s++;
 	}
 }
 

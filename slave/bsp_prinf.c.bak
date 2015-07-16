@@ -1,5 +1,5 @@
 // 重定义 putchar 函数， 这样可以使用printf函数从串口打印输出
-#include "uart.h"
+
 char putchar(char c) {
 	UART_SendByte(c);
 	return c;

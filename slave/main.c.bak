@@ -16,6 +16,6 @@ void main() {
 	while(1){
 		adc1 = TM7705_ReadAdc(1);
 		adc2 = TM7705_ReadAdc(2);
-		printf("CH1 = %04X, (%7.5f) V \t CH2 = %04X, (%7.5f) V \r\n", adc1, (adc1*5.0)/65535, adc2, (adc2*5.0)/65535);
+		printf("CH1 = %04X, (%7.4f) V \t CH2 = %04X, (%7.4f) V \r\n", adc1, (adc1*5.0)/65535, adc2, (adc2*5.0)/65535);
 	}
 }
