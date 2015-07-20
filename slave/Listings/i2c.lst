@@ -1,15 +1,15 @@
-C51 COMPILER V9.54   I2C                                                                   07/17/2015 17:30:15 PAGE 1   
+C51 COMPILER V9.54   I2C                                                                   07/17/2015 21:57:06 PAGE 1   
 
 
 C51 COMPILER V9.54, COMPILATION OF MODULE I2C
 OBJECT MODULE PLACED IN .\Objects\i2c.obj
-COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE i2c.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\i2c.l
-                    -st) OBJECT(.\Objects\i2c.obj)
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE i2c.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\i2c.l
+                    -st) TABS(2) OBJECT(.\Objects\i2c.obj)
 
 line level    source
 
    1          /*
-   2                  I2C 协议
+   2            I2C 协议
    3          */
    4          #include "i2c.h"
    5          #include "delay.h"
@@ -20,219 +20,219 @@ line level    source
   10          sbit SCL = P2^0;
   11          
   12          /*
-  13                  启动总线
+  13            启动总线
   14          */
   15          void Start_I2C() {
-  16   1              SDA = 1;
-  17   1              _nop_();
-  18   1              SCL = 1;
-  19   1              _nop_();
-  20   1              _nop_();
-  21   1              _nop_();
-  22   1              _nop_();
-  23   1              _nop_();
-  24   1              SDA = 0;
-  25   1              _nop_();
-  26   1              _nop_();
-  27   1              _nop_();
-  28   1              _nop_();
-  29   1              _nop_();
-  30   1              SCL = 0;
-  31   1              _nop_();
-  32   1              _nop_();
+  16   1        SDA = 1;
+  17   1        _nop_();
+  18   1        SCL = 1;
+  19   1        _nop_();
+  20   1        _nop_();
+  21   1        _nop_();
+  22   1        _nop_();
+  23   1        _nop_();
+  24   1        SDA = 0;
+  25   1        _nop_();
+  26   1        _nop_();
+  27   1        _nop_();
+  28   1        _nop_();
+  29   1        _nop_();
+  30   1        SCL = 0;
+  31   1        _nop_();
+  32   1        _nop_();
   33   1      }
   34          
   35          /*
-  36                  结束总线
+  36            结束总线
   37          */
   38          void Stop_I2C() {
-  39   1              SDA = 0;
-  40   1              _nop_();
-  41   1              SCL = 1;
-  42   1              _nop_();
-  43   1              _nop_();
-  44   1              _nop_();
-  45   1              _nop_();
-  46   1              _nop_();
-  47   1              SDA = 1;
-  48   1              _nop_();
-  49   1              _nop_();
-  50   1              _nop_();
-  51   1              _nop_();
-  52   1              _nop_();
+  39   1        SDA = 0;
+  40   1        _nop_();
+  41   1        SCL = 1;
+  42   1        _nop_();
+  43   1        _nop_();
+  44   1        _nop_();
+  45   1        _nop_();
+  46   1        _nop_();
+  47   1        SDA = 1;
+  48   1        _nop_();
+  49   1        _nop_();
+  50   1        _nop_();
+  51   1        _nop_();
+  52   1        _nop_();
   53   1      }
   54          
-C51 COMPILER V9.54   I2C                                                                   07/17/2015 17:30:15 PAGE 2   
+C51 COMPILER V9.54   I2C                                                                   07/17/2015 21:57:06 PAGE 2   
 
   55          /*
-  56                  传送一个字节数据
-  57                  将数据c发送出去, 可以是地址, 也可以是数据,
-  58                  发完后等待应答, 并返回此状态位.
+  56            传送一个字节数据
+  57            将数据c发送出去, 可以是地址, 也可以是数据,
+  58            发完后等待应答, 并返回此状态位.
   59          */
   60          bit SendByte(unsigned char c) {
-  61   1              unsigned char BitCnt;
-  62   1              bit ack = 0;
-  63   1              for (BitCnt = 0; BitCnt < 8; BitCnt++){
-  64   2                      if((c<<BitCnt) & 0x80)
-  65   2                              SDA = 1;
-  66   2                      else
-  67   2                              SDA = 0;
-  68   2                      _nop_();
-  69   2                      SCL = 1;
-  70   2                      _nop_();
-  71   2                      _nop_();
-  72   2                      _nop_();
-  73   2                      _nop_();
-  74   2                      _nop_();
-  75   2                      SCL = 0;
-  76   2              }
-  77   1              //准备接受应答位
-  78   1              _nop_();
-  79   1              _nop_();
-  80   1              SDA = 1;
-  81   1              _nop_();
-  82   1              _nop_();
-  83   1              SCL = 1;
-  84   1              _nop_();
-  85   1              _nop_();
-  86   1              _nop_();
-  87   1              if (SDA == 1)
-  88   1                      ack = 0;
-  89   1              else
-  90   1                      ack = 1;
-  91   1              SCL = 0;
-  92   1              _nop_();
-  93   1              return (bit)(ack);
+  61   1        unsigned char BitCnt;
+  62   1        bit ack = 0;
+  63   1        for (BitCnt = 0; BitCnt < 8; BitCnt++){
+  64   2          if((c<<BitCnt) & 0x80)
+  65   2            SDA = 1;
+  66   2          else
+  67   2            SDA = 0;
+  68   2          _nop_();
+  69   2          SCL = 1;
+  70   2          _nop_();
+  71   2          _nop_();
+  72   2          _nop_();
+  73   2          _nop_();
+  74   2          _nop_();
+  75   2          SCL = 0;
+  76   2        }
+  77   1        //准备接受应答位
+  78   1        _nop_();
+  79   1        _nop_();
+  80   1        SDA = 1;
+  81   1        _nop_();
+  82   1        _nop_();
+  83   1        SCL = 1;
+  84   1        _nop_();
+  85   1        _nop_();
+  86   1        _nop_();
+  87   1        if (SDA == 1)
+  88   1          ack = 0;
+  89   1        else
+  90   1          ack = 1;
+  91   1        SCL = 0;
+  92   1        _nop_();
+  93   1        return (bit)(ack);
   94   1      }
   95          
   96          /*
-  97                  接受一个字节数据
-  98                  不应答，发送一系列数据后用应答函数
+  97            接受一个字节数据
+  98            不应答，发送一系列数据后用应答函数
   99          */
  100          unsigned char RcvByte() {
- 101   1              unsigned char retc = 0;
- 102   1              unsigned char BitCnt;
+ 101   1        unsigned char retc = 0;
+ 102   1        unsigned char BitCnt;
  103   1      
- 104   1              SDA = 1;
- 105   1              for (BitCnt = 0; BitCnt < 8; BitCnt ++){
- 106   2                      _nop_();
- 107   2                      SCL = 0;
- 108   2                      _nop_();
- 109   2                      _nop_();
- 110   2                      _nop_();
- 111   2                      _nop_();
- 112   2                      _nop_();
- 113   2                      _nop_();
- 114   2                      SCL = 1;
- 115   2                      _nop_();
- 116   2                      _nop_();
-C51 COMPILER V9.54   I2C                                                                   07/17/2015 17:30:15 PAGE 3   
+ 104   1        SDA = 1;
+ 105   1        for (BitCnt = 0; BitCnt < 8; BitCnt ++){
+ 106   2          _nop_();
+ 107   2          SCL = 0;
+ 108   2          _nop_();
+ 109   2          _nop_();
+ 110   2          _nop_();
+ 111   2          _nop_();
+ 112   2          _nop_();
+ 113   2          _nop_();
+ 114   2          SCL = 1;
+ 115   2          _nop_();
+ 116   2          _nop_();
+C51 COMPILER V9.54   I2C                                                                   07/17/2015 21:57:06 PAGE 3   
 
- 117   2                      retc <<= 1;
- 118   2                      if(SDA)
- 119   2                              retc += 1;
- 120   2                      _nop_();
- 121   2                      _nop_();
- 122   2              }
- 123   1              SCL = 0;
- 124   1              _nop_();
- 125   1              _nop_();
- 126   1              return retc;
+ 117   2          retc <<= 1;
+ 118   2          if(SDA)
+ 119   2            retc += 1;
+ 120   2          _nop_();
+ 121   2          _nop_();
+ 122   2        }
+ 123   1        SCL = 0;
+ 124   1        _nop_();
+ 125   1        _nop_();
+ 126   1        return retc;
  127   1      }
  128          
  129          /*
- 130                  应答函数
+ 130            应答函数
  131          */
  132          void Ack_I2C() {
- 133   1              SDA = 0;
- 134   1              _nop_();
- 135   1              _nop_();
- 136   1              _nop_();
- 137   1              SCL = 1;
- 138   1              _nop_();
- 139   1              _nop_();
- 140   1              _nop_();
- 141   1              _nop_();
- 142   1              _nop_();
- 143   1              SCL = 0;
- 144   1              _nop_();
- 145   1              _nop_();
+ 133   1        SDA = 0;
+ 134   1        _nop_();
+ 135   1        _nop_();
+ 136   1        _nop_();
+ 137   1        SCL = 1;
+ 138   1        _nop_();
+ 139   1        _nop_();
+ 140   1        _nop_();
+ 141   1        _nop_();
+ 142   1        _nop_();
+ 143   1        SCL = 0;
+ 144   1        _nop_();
+ 145   1        _nop_();
  146   1      }
  147          
  148          /*
- 149                  不应答函数
+ 149            不应答函数
  150          */
  151          void No_Ack_I2C() {
- 152   1              SDA = 1;
- 153   1              _nop_();
- 154   1              _nop_();
- 155   1              _nop_();
- 156   1              SCL = 1;
- 157   1              _nop_();
- 158   1              _nop_();
- 159   1              _nop_();
- 160   1              _nop_();
- 161   1              _nop_();
- 162   1              SCL = 0;
- 163   1              _nop_();
- 164   1              _nop_();
+ 152   1        SDA = 1;
+ 153   1        _nop_();
+ 154   1        _nop_();
+ 155   1        _nop_();
+ 156   1        SCL = 1;
+ 157   1        _nop_();
+ 158   1        _nop_();
+ 159   1        _nop_();
+ 160   1        _nop_();
+ 161   1        _nop_();
+ 162   1        SCL = 0;
+ 163   1        _nop_();
+ 164   1        _nop_();
  165   1      }
  166          
  167          /*
- 168                  向有子地址器件发送多字节数据函数
- 169                  sla,   slave address
- 170                  suba,  slave sub address
- 171                  *s,    pointer to a string to be sended
- 172                  num,   number of bytes to send 
+ 168            向有子地址器件发送多字节数据函数
+ 169            sla,   slave address
+ 170            suba,  slave sub address
+ 171            *s,    pointer to a string to be sended
+ 172            num,   number of bytes to send 
  173          
  174          */
  175          bit ISendStr(unsigned char sla,unsigned char suba, unsigned char *s, unsigned char num) {
- 176   1              unsigned char i;
- 177   1              for (i=0; i<num; i++) { 
- 178   2                      Start_I2C();             //启动总线
-C51 COMPILER V9.54   I2C                                                                   07/17/2015 17:30:15 PAGE 4   
+ 176   1        unsigned char i;
+ 177   1        for (i=0; i<num; i++) { 
+ 178   2          Start_I2C();             //启动总线
+C51 COMPILER V9.54   I2C                                                                   07/17/2015 21:57:06 PAGE 4   
 
- 179   2                      if (!SendByte(sla))      //发送器件地址
- 180   2                              return 0;
- 181   2                      if (!SendByte(suba))     //发送器件子地址
- 182   2                              return 0;
- 183   2                  if (!SendByte(*s))       //发送数据
- 184   2                      return 0;
- 185   2                  Stop_I2C();              //结束总线
- 186   2                      DelayMs(1);              //必须延时等待芯片内部自动处理数据完毕
- 187   2                      s++;
- 188   2                      suba++;
+ 179   2          if (!SendByte(sla))      //发送器件地址
+ 180   2            return 0;
+ 181   2            if (!SendByte(suba))     //发送器件子地址
+ 182   2              return 0;
+ 183   2            if (!SendByte(*s))       //发送数据
+ 184   2              return 0;
+ 185   2            Stop_I2C();              //结束总线
+ 186   2          DelayMs(1);              //必须延时等待芯片内部自动处理数据完毕
+ 187   2          s++;
+ 188   2          suba++;
  189   2          } 
  190   1          return 1;
  191   1      }
  192          
  193          /*
- 194                  向有子地址器件接收多字节数据函数
- 195                  sla,   slave address
- 196                  suba,  slave sub address
- 197                  *s,    pointer to a string to be sended
- 198                  num,   number of bytes to send 
+ 194            向有子地址器件接收多字节数据函数
+ 195            sla,   slave address
+ 196            suba,  slave sub address
+ 197            *s,    pointer to a string to be sended
+ 198            num,   number of bytes to send 
  199          
  200          */
  201          bit IRcvStr(unsigned char sla, unsigned char suba, unsigned char *s, unsigned char num) {
- 202   1              unsigned char i;
- 203   1              Start_I2C();                  //启动总线
- 204   1              if (!SendByte(sla))             //发送器件地址
- 205   1                      return 0;
- 206   1              if (!SendByte(suba))            //发送器件子地址
- 207   1                      return 0;
- 208   1              //Start_I2c();
- 209   1              if (!SendByte(sla+1))
- 210   1                      return 0;
- 211   1              for(i=0; i<num-1; i++) { 
- 212   2                      *s = RcvByte();              //发送数据
- 213   2                      Ack_I2C();                 //发送就答位 
- 214   2                      s++;
+ 202   1        unsigned char i;
+ 203   1          Start_I2C();                  //启动总线
+ 204   1          if (!SendByte(sla))             //发送器件地址
+ 205   1            return 0;
+ 206   1          if (!SendByte(suba))            //发送器件子地址
+ 207   1            return 0;
+ 208   1        //Start_I2c();
+ 209   1        if (!SendByte(sla+1))
+ 210   1          return 0;
+ 211   1          for(i=0; i<num-1; i++) { 
+ 212   2            *s = RcvByte();              //发送数据
+ 213   2            Ack_I2C();                 //发送就答位 
+ 214   2            s++;
  215   2          } 
- 216   1              *s=RcvByte();
+ 216   1          *s=RcvByte();
  217   1          No_Ack_I2C();                   //发送非应位
  218   1          Stop_I2C();                    //结束总线
- 219   1              return 1;
+ 219   1          return 1;
  220   1      }
 
 

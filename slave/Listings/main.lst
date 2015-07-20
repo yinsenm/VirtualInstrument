@@ -1,10 +1,10 @@
-C51 COMPILER V9.54   MAIN                                                                  07/17/2015 17:30:15 PAGE 1   
+C51 COMPILER V9.54   MAIN                                                                  07/17/2015 21:57:06 PAGE 1   
 
 
 C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
 OBJECT MODULE PLACED IN .\Objects\main.obj
-COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
-                    -.lst) OBJECT(.\Objects\main.obj)
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
 
 line level    source
 
@@ -16,80 +16,81 @@ line level    source
    6          #include <stdio.h>
    7          #include <reg52.h>
    8          
-   9          unsigned char flag = 0;
-  10          unsigned short count = 0;
-  11          unsigned long rotation = 0;
+   9          unsigned char ex0_flag = 0; //外部中断INT0的中断标志，2次中断后开始计时
+  10          unsigned char cal_flag = 0; //计算标志位，标志为1时开始计算
+  11          unsigned short count = 0;
   12          
   13          void EX0_Init() {
-  14   1              EA = 1;
-  15   1              IT0 = 1;
-  16   1              TMOD &= 0xF0;
-  17   1              TMOD |= 0x01;
-  18   1              TH0 = 0;
-  19   1              TL0 = 0;
+  14   1        EA = 1;
+  15   1        IT0 = 1;
+  16   1        TMOD &= 0xF0;
+  17   1        TMOD |= 0x01;
+  18   1        TH0 = 0;
+  19   1        TL0 = 0;
   20   1      }
   21          
   22          void EX0_ISR () interrupt 0 {
-  23   1              if (flag == 0) {
-  24   2                      TR0 = 1;
-  25   2                      flag = 1;
-  26   2              } 
-  27   1      
-  28   1              else if (flag == 1) {
-  29   2                      TR0 = 0;
-  30   2                      EX0 = 0;
-  31   2                      flag = 2;
-  32   2              }
-  33   1              
-  34   1      }
-  35          
-  36          void Timer0_ISR() interrupt 1{
-  37   1              count ++;
-  38   1              TL0 = 0;
-  39   1              TH0 = 0;
-  40   1      }
-  41          
-  42          void main() {
-  43   1              unsigned int adc1, adc2;
-  44   1              UART_Init();
-  45   1              TM7705_Init();
-  46   1              EX0_Init();
-  47   1              //自校准
-  48   1              TM7705_CalibSelf(1);
-  49   1              TM7705_CalibSelf(2);
-  50   1              while(1){
-  51   2                      adc1 = TM7705_ReadAdc(1);
-  52   2                      adc2 = TM7705_ReadAdc(2);
-  53   2                      EX0 = 1;
-  54   2      
-C51 COMPILER V9.54   MAIN                                                                  07/17/2015 17:30:15 PAGE 2   
+  23   1        ex0_flag++;
+  24   1        if(ex0_flag == 2) {
+  25   2          TR0 =~ TR0; //开启关闭定时器，第二次触发开，第三次触发关
+  26   2          if(TR0) { //定时器开时
+  27   3            ex0_flag = 1;
+  28   3          }
+  29   2          if(!TR0) {        
+  30   3            EX0 = 0;      
+  31   3            cal_flag = 1; //计算标志置1，即可以计算两次下降沿的值     
+  32   3            ex0_flag = 0;
+  33   3          }
+  34   2        } 
+  35   1      }
+  36          
+  37          void Timer0_ISR() interrupt 1{
+  38   1        count ++;
+  39   1        TL0 = 0;
+  40   1        TH0 = 0;
+  41   1      }
+  42          
+  43          void main() {
+  44   1        unsigned int adc1, adc2;
+  45   1        unsigned long rotation;
+  46   1        UART_Init();
+  47   1        TM7705_Init();
+  48   1        EX0_Init();
+  49   1        //自校准
+  50   1        TM7705_CalibSelf(1);
+  51   1        TM7705_CalibSelf(2);
+  52   1        while(1) {
+  53   2          adc1 = TM7705_ReadAdc(1);
+  54   2          adc2 = TM7705_ReadAdc(2);
+C51 COMPILER V9.54   MAIN                                                                  07/17/2015 21:57:06 PAGE 2   
 
-  55   2                      while(flag != 2);
-  56   2                      if (flag == 2) {
-  57   3                              EX0 = 0;
-  58   3                              flag = 0;
-  59   3                              count = 0;
-  60   3                              rotation = 65536 * count + 256 * TH0 + TL0;
-  61   3                      }
-  62   2      
-  63   2                      //printf("CH1 = %04X, (%7.5f) V \t CH2 = %04X, (%7.5f) V \r\n", adc1, (adc1*5.0)/65535, adc2, (adc2*5.0)
-             -/65535);
-  64   2                      printf("%d \t %X \t %X \r\n", count, TH0, TL0);
-  65   2                      printf("rotation = %10.5f Hz \n", 1000000/(rotation * 0.9216));
-  66   2      
-  67   2      
-  68   2      
-  69   2              }
-  70   1      }
-  71          
+  55   2          
+  56   2          EX0 = 1;
+  57   2          //while(cal_flag != 1);
+  58   2          if (cal_flag == 1) {
+  59   3            EX0 = 0;
+  60   3            cal_flag = 0;
+  61   3            count = 0;
+  62   3            rotation = 65536 * count + 256 * TH0 + TL0;
+  63   3            printf("rotation = (%10.5f) s \n", (1.08*rotation)/1000000);
+  64   3          } else {
+  65   3            printf("not detected\r\n");
+  66   3          }
+  67   2          printf("CH1 = %04X, (%7.5f) V \t CH2 = %04X, (%7.5f) V \r\n", adc1, (adc1*5.0)/65535, adc2, (adc2*5.0)/6
+             -5535);
+  68   2          //printf("%d \t %X \t %X \r\n", count, TH0, TL0);
+  69   2      
+  70   2        }
+  71   1      }
+  72          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    271    ----
-   CONSTANT SIZE    =     39    ----
+   CODE SIZE        =    328    ----
+   CONSTANT SIZE    =     88    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =      7       4
+   DATA SIZE        =      4       4
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.
