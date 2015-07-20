@@ -48,7 +48,7 @@
           <OutputName>下位机</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
@@ -230,7 +230,7 @@
               <RCB>
                 <Type>0</Type>
                 <StartAddress>0x0</StartAddress>
-                <Size>0x0</Size>
+                <Size>0x10000</Size>
               </RCB>
               <RXB>
                 <Type>0</Type>
@@ -374,11 +374,6 @@
               <FilePath>.\i2c.c</FilePath>
             </File>
             <File>
-              <FileName>isp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\isp.c</FilePath>
-            </File>
-            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
@@ -394,11 +389,6 @@
               <FilePath>.\i2c.h</FilePath>
             </File>
             <File>
-              <FileName>isp.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\isp.h</FilePath>
-            </File>
-            <File>
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\delay.c</FilePath>
@@ -407,6 +397,31 @@
               <FileName>delay.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\delay.h</FilePath>
+            </File>
+            <File>
+              <FileName>tm7705.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\tm7705.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_prinf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bsp_prinf.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\uart.h</FilePath>
+            </File>
+            <File>
+              <FileName>tm7705.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\tm7705.h</FilePath>
             </File>
           </Files>
         </Group>

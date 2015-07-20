@@ -1,35 +1,35 @@
-C51 COMPILER V9.54   DELAY                                                                 07/17/2015 21:57:06 PAGE 1   
+C51 COMPILER V9.54   DELAY                                                                 07/20/2015 17:25:22 PAGE 1   
 
 
 C51 COMPILER V9.54, COMPILATION OF MODULE DELAY
 OBJECT MODULE PLACED IN .\Objects\delay.obj
-COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE delay.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\del
-                    -ay.lst) TABS(2) OBJECT(.\Objects\delay.obj)
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE delay.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\del
+                    -ay.lst) OBJECT(.\Objects\delay.obj)
 
 line level    source
 
    1          /*
-   2            延时程序
+   2                  延时程序
    3          */
    4          
    5          #include "delay.h"
    6          
    7          /*
-   8            Func: 延时 t * 2 + 5 uS
+   8                  Func: 延时 t * 2 + 5 uS
    9          */
   10          void DelayUs2x(unsigned char t) {   
-  11   1        while(--t);
+  11   1              while(--t);
   12   1      }
   13          
   14          
   15          /*
-  16            Func: 大致延时1 ms
+  16                  Func: 大致延时1 ms
   17          */
   18          void DelayMs(unsigned char t) {
-  19   1        while(t--) {
-  20   2          DelayUs2x(245);
-  21   2          DelayUs2x(245);
-  22   2        }
+  19   1              while(t--) {
+  20   2                      DelayUs2x(245);
+  21   2                      DelayUs2x(245);
+  22   2              }
   23   1      }
 
 
