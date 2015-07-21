@@ -6,6 +6,8 @@ char putchar(char c) {
 }
 
 // 重定义C库中的 getchar 函数,这样可以使用scanff函数从串口输入数据
-char getchar() {
+
+/*
+unsigned char getchar() {
 	return UART_GetByte();
-}
+}*/

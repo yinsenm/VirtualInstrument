@@ -3,6 +3,7 @@
 // #include "i2c.h"
 // #include "1602.h"
 #include "uart.h"
+#include "modbus.h"
 #include <stdio.h>
 #include <reg52.h>
 
@@ -43,7 +44,8 @@ void Timer0_ISR() interrupt 1{
 }
 
 void main() {
-	unsigned int adc1, adc2;
+	//unsigned int pData[4];
+	char Str[20];
 	//unsigned long rotation;
 	UART_Init();
 	TM7705_Init();
@@ -52,23 +54,26 @@ void main() {
 	TM7705_CalibSelf(1);
 	TM7705_CalibSelf(2);
 	while(1) {
-		adc1 = TM7705_ReadAdc(1);
-		adc2 = TM7705_ReadAdc(2);
-		
 		//while(cal_flag != 1);
-		if (cal_flag == 1) {
+		/*if (cal_flag == 1) {
 			EX0 = 0;
 			cal_flag = 0;
 			//rotation = 65536 * count + 256 * TH0 + TL0;
-			printf("%d \r\n", count);
-			printf("%8.4f RPM \r\n", 60000000/(1.08*(65536 * count + 256 * TH0 + TL0)));
+			//printf("%d \r\n", count);
+			//printf("%8.3f Hz \r\n", 1000000/(1.08*(65536 * count + 256 * TH0 + TL0)));
+			pData[0] = count;
+			pData[1] = 256 * TH0 + TL0;			
+			pData[2] = TM7705_ReadAdc(1);
+			pData[3] = TM7705_ReadAdc(2);
+			MODBUS(pData, 3, 1); 
 			count = 0;
 			TH0 = 0;
 			TL0 = 0;
 			EX0 = 1;
-		} 
-		//printf("CH1 = %04X, (%7.5f) V \t CH2 = %04X, (%7.5f) V \r\n", adc1, (adc1*5.0)/65535, adc2, (adc2*5.0)/65535);
-		//printf("%d \t %X \t %X \r\n", count, TH0, TL0);
-
+		} */
+		
+		if(scanf("%s", Str)) {
+			printf("Ture");
+		}
 	}
 }

@@ -1,4 +1,4 @@
-C51 COMPILER V9.54   MAIN                                                                  07/20/2015 17:25:22 PAGE 1   
+C51 COMPILER V9.54   MAIN                                                                  07/21/2015 17:19:02 PAGE 1   
 
 
 C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
@@ -13,86 +13,90 @@ line level    source
    3          // #include "i2c.h"
    4          // #include "1602.h"
    5          #include "uart.h"
-   6          #include <stdio.h>
-   7          #include <reg52.h>
-   8          
-   9          unsigned char ex0_flag = 0; //外部中断INT0的中断标志，2次中断后开始计时
-  10          unsigned char cal_flag = 0; //计算标志位，标志为1时开始计算
-  11          unsigned int count = 0;
-  12          
-  13          void EX0_Init() {
-  14   1              EA = 1;
-  15   1              IT0 = 1;
-  16   1              TMOD &= 0xF0;
-  17   1              TMOD |= 0x01;
-  18   1              TH0 = 0;
-  19   1              TL0 = 0;
-  20   1              EX0 = 1;
-  21   1              ET0 = 1;
-  22   1      }
-  23          
-  24          void EX0_ISR () interrupt 0 {
-  25   1              ex0_flag++;
-  26   1              if(ex0_flag == 2) {
-  27   2                      TR0 =~ TR0; //开启关闭定时器，第二次触发开，第三次触发关
-  28   2                      if(TR0) { //定时器开时
-  29   3                              ex0_flag = 1;
-  30   3                      }
-  31   2                      if(!TR0) {        
-  32   3                              EX0 = 0;      
-  33   3                              cal_flag = 1; //计算标志置1，即可以计算两次下降沿的值                 
-  34   3                              ex0_flag = 0;
-  35   3                      }
-  36   2              } 
-  37   1      }
-  38          
-  39          void Timer0_ISR() interrupt 1{
-  40   1              count = count + 1;
-  41   1              TL0 = 0;
-  42   1              TH0 = 0;
-  43   1      }
-  44          
-  45          void main() {
-  46   1              unsigned int adc1, adc2;
-  47   1              //unsigned long rotation;
-  48   1              UART_Init();
-  49   1              TM7705_Init();
-  50   1              EX0_Init();
-  51   1              //自校准
-  52   1              TM7705_CalibSelf(1);
-  53   1              TM7705_CalibSelf(2);
-  54   1              while(1) {
-C51 COMPILER V9.54   MAIN                                                                  07/20/2015 17:25:22 PAGE 2   
+   6          #include "modbus.h"
+   7          #include <stdio.h>
+   8          #include <reg52.h>
+   9          
+  10          unsigned char ex0_flag = 0; //外部中断INT0的中断标志，2次中断后开始计时
+  11          unsigned char cal_flag = 0; //计算标志位，标志为1时开始计算
+  12          unsigned int count = 0;
+  13          
+  14          void EX0_Init() {
+  15   1              EA = 1;
+  16   1              IT0 = 1;
+  17   1              TMOD &= 0xF0;
+  18   1              TMOD |= 0x01;
+  19   1              TH0 = 0;
+  20   1              TL0 = 0;
+  21   1              EX0 = 1;
+  22   1              ET0 = 1;
+  23   1      }
+  24          
+  25          void EX0_ISR () interrupt 0 {
+  26   1              ex0_flag++;
+  27   1              if(ex0_flag == 2) {
+  28   2                      TR0 =~ TR0; //开启关闭定时器，第二次触发开，第三次触发关
+  29   2                      if(TR0) { //定时器开时
+  30   3                              ex0_flag = 1;
+  31   3                      }
+  32   2                      if(!TR0) {        
+  33   3                              EX0 = 0;      
+  34   3                              cal_flag = 1; //计算标志置1，即可以计算两次下降沿的值                 
+  35   3                              ex0_flag = 0;
+  36   3                      }
+  37   2              } 
+  38   1      }
+  39          
+  40          void Timer0_ISR() interrupt 1{
+  41   1              count = count + 1;
+  42   1              TL0 = 0;
+  43   1              TH0 = 0;
+  44   1      }
+  45          
+  46          void main() {
+  47   1              //unsigned int pData[4];
+  48   1              char Str[20];
+  49   1              //unsigned long rotation;
+  50   1              UART_Init();
+  51   1              TM7705_Init();
+  52   1              EX0_Init();
+  53   1              //自校准
+  54   1              TM7705_CalibSelf(1);
+C51 COMPILER V9.54   MAIN                                                                  07/21/2015 17:19:02 PAGE 2   
 
-  55   2                      adc1 = TM7705_ReadAdc(1);
-  56   2                      adc2 = TM7705_ReadAdc(2);
-  57   2                      
-  58   2                      //while(cal_flag != 1);
-  59   2                      if (cal_flag == 1) {
-  60   3                              EX0 = 0;
-  61   3                              cal_flag = 0;
-  62   3                              //rotation = 65536 * count + 256 * TH0 + TL0;
-  63   3                              printf("%d \r\n", count);
-  64   3                              printf("%8.3f Hz \r\n", 1000000/(1.08*(65536 * count + 256 * TH0 + TL0)));
-  65   3                              count = 0;
-  66   3                              TH0 = 0;
-  67   3                              TL0 = 0;
-  68   3                              EX0 = 1;
-  69   3                      } 
-  70   2                      //printf("CH1 = %04X, (%7.5f) V \t CH2 = %04X, (%7.5f) V \r\n", adc1, (adc1*5.0)/65535, adc2, (adc2*5.0)
-             -/65535);
-  71   2                      //printf("%d \t %X \t %X \r\n", count, TH0, TL0);
-  72   2      
-  73   2              }
-  74   1      }
+  55   1              TM7705_CalibSelf(2);
+  56   1              while(1) {
+  57   2                      //while(cal_flag != 1);
+  58   2                      /*if (cal_flag == 1) {
+  59   2                              EX0 = 0;
+  60   2                              cal_flag = 0;
+  61   2                              //rotation = 65536 * count + 256 * TH0 + TL0;
+  62   2                              //printf("%d \r\n", count);
+  63   2                              //printf("%8.3f Hz \r\n", 1000000/(1.08*(65536 * count + 256 * TH0 + TL0)));
+  64   2                              pData[0] = count;
+  65   2                              pData[1] = 256 * TH0 + TL0;                     
+  66   2                              pData[2] = TM7705_ReadAdc(1);
+  67   2                              pData[3] = TM7705_ReadAdc(2);
+  68   2                              MODBUS(pData, 3, 1); 
+  69   2                              count = 0;
+  70   2                              TH0 = 0;
+  71   2                              TL0 = 0;
+  72   2                              EX0 = 1;
+  73   2                      } */
+  74   2                      
+  75   2                      if(scanf("%s", Str)) {
+  76   3                              printf("Ture");
+  77   3                      }
+  78   2              }
+  79   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    259    ----
-   CONSTANT SIZE    =     18    ----
+   CODE SIZE        =    126    ----
+   CONSTANT SIZE    =      8    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =      4       4
+   DATA SIZE        =      4      20
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.

@@ -45,7 +45,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>下位机</OutputName>
+          <OutputName>slave</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -369,6 +369,16 @@
               <FilePath>.\1602.c</FilePath>
             </File>
             <File>
+              <FileName>bsp_prinf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bsp_prinf.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\delay.c</FilePath>
+            </File>
+            <File>
               <FileName>i2c.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\i2c.c</FilePath>
@@ -379,24 +389,9 @@
               <FilePath>.\main.c</FilePath>
             </File>
             <File>
-              <FileName>1602.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\1602.h</FilePath>
-            </File>
-            <File>
-              <FileName>i2c.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\i2c.h</FilePath>
-            </File>
-            <File>
-              <FileName>delay.c</FileName>
+              <FileName>modbus.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>delay.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\delay.h</FilePath>
+              <FilePath>.\modbus.c</FilePath>
             </File>
             <File>
               <FileName>tm7705.c</FileName>
@@ -409,19 +404,34 @@
               <FilePath>.\uart.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_prinf.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\bsp_prinf.c</FilePath>
+              <FileName>1602.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\1602.h</FilePath>
             </File>
             <File>
-              <FileName>uart.h</FileName>
+              <FileName>delay.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\uart.h</FilePath>
+              <FilePath>.\delay.h</FilePath>
+            </File>
+            <File>
+              <FileName>i2c.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\i2c.h</FilePath>
+            </File>
+            <File>
+              <FileName>modbus.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\modbus.h</FilePath>
             </File>
             <File>
               <FileName>tm7705.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\tm7705.h</FilePath>
+            </File>
+            <File>
+              <FileName>uart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\uart.h</FilePath>
             </File>
           </Files>
         </Group>

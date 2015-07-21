@@ -1,0 +1,10 @@
+".\Objects\1602.obj",
+".\Objects\bsp_prinf.obj",
+".\Objects\delay.obj",
+".\Objects\i2c.obj",
+".\Objects\main.obj",
+".\Objects\modbus.obj",
+".\Objects\tm7705.obj",
+".\Objects\uart.obj" 
+TO ".\Objects\slave" 
+PRINT(".\Listings\slave.m51") RAMSIZE(256) 

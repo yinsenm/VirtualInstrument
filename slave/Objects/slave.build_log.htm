@@ -19,17 +19,18 @@ CPU DLL:         S8051.DLL V3.100.0.0
 Dialog DLL:      DP51.DLL V2.62.0.1 
 <h2>Project:</h2>
 F:\VirtualInstrument\slave\slave.uvproj
-Project File Date:  07/20/2015
+Project File Date:  07/21/2015
 
 <h2>Output:</h2>
 Rebuild target 'Target 1'
 compiling 1602.c...
+compiling bsp_prinf.c...
+compiling delay.c...
 compiling i2c.c...
 compiling main.c...
-compiling delay.c...
+compiling modbus.c...
 compiling tm7705.c...
 compiling uart.c...
-compiling bsp_prinf.c...
 linking...
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?LCD_CLEAR?1602
@@ -42,6 +43,8 @@ linking...
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_IRCVSTR?I2C
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_MODBUS?MODBUS
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_TM7705_WRITEREG?TM7705
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_TM7705_READREG?TM7705
@@ -50,12 +53,14 @@ linking...
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_TM7705_SYTEMCALIBFULL?TM7705
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?_UART_SENDSTR?UART
+    SEGMENT: ?PR?_TM7705_READADC?TM7705
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?GETCHAR?BSP_PRINF
-Program Size: data=85.2 xdata=0 code=4305
-creating hex file from ".\Objects\下位机"...
-".\Objects\下位机" - 0 Error(s), 11 Warning(s).
+    SEGMENT: ?PR?UART_GETBYTE?UART
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_UART_SENDSTR?UART
+Program Size: data=122.3 xdata=0 code=3823
+creating hex file from ".\Objects\slave"...
+".\Objects\slave" - 0 Error(s), 13 Warning(s).
 </pre>
 </body>
 </html>

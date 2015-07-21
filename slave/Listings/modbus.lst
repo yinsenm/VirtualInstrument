@@ -1,0 +1,51 @@
+C51 COMPILER V9.54   MODBUS                                                                07/21/2015 17:19:02 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MODBUS
+OBJECT MODULE PLACED IN .\Objects\modbus.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE modbus.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\mo
+                    -dbus.lst) OBJECT(.\Objects\modbus.obj)
+
+line level    source
+
+   1          /*
+   2                  Modbus 串口通信协议
+   3          */
+   4          #include "modbus.h"
+   5          #include <stdio.h>
+   6          void MODBUS(unsigned int *pData, unsigned int addr, unsigned int frc) {
+   7   1              unsigned char i;
+   8   1              unsigned int lrc;
+   9   1              lrc = LRC(pData, addr, frc);
+  10   1              printf(":");
+  11   1              printf("%02X%02X", addr, frc);
+  12   1              for (i = 0; i < 4; i++) {
+  13   2                      printf("%04X", pData[i]);
+  14   2              }
+  15   1              printf("%02X\r\n", lrc);
+  16   1      }
+  17          
+  18          unsigned int LRC(unsigned int *pData, unsigned int addr, unsigned int frc) {
+  19   1              unsigned int lrc = 0;
+  20   1              unsigned char i;
+  21   1              lrc = lrc + (addr + frc);
+  22   1              for (i = 0; i < 4; i++) {
+  23   2                      lrc = lrc + (pData[i] / 256) + (pData[i] % 256);
+  24   2              }
+  25   1              return ((~lrc) + 1);
+  26   1      }
+  27          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    204    ----
+   CONSTANT SIZE    =     23    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      18
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
