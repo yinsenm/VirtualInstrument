@@ -4,34 +4,12 @@
 
 #include <reg52.h>
 
+static char echo_flag = 0;
+
 // 串口中断
 void UART_isr() interrupt 4 {
 	if (RI) {
 
-	}
-}
-
-//串口发送一字节
-void UART_SendByte(unsigned char _data) {
-	SBUF = _data;	/* 发送数据送缓冲 */
-	while(!TI);		/* 等待发送完成 */
-	TI = 0;
-}
-
-
-//串口接收一字节
-unsigned char UART_GetByte() {
-	unsigned char c;
-	while (RI == 0);
-	c = SBUF;
-	RI = 0;	
-	return c;
-}
-
-//串口发送字符串
-void UART_SendStr(unsigned char *str, unsigned char len) {
-	while(len --){
-		UART_SendByte(*str++);
 	}
 }
 
@@ -45,4 +23,31 @@ void UART_Init() {	    //9600bps@11.0592MHz
 	TH1 = 0xFD;		//设定定时器重装值
 	ET1 = 0;		//禁止定时器1中断
 	TR1 = 1;		//启动定时器1
+	TI = 1;
+}
+
+//复写 putchar
+char putchar(char c) {
+	if(!echo_flag) {
+		if (c == '\n') {
+			while (!TI);
+    		TI = 0;
+    		SBUF = 0x0D;   /* output CR  */
+  		}
+  		while (!TI);
+  		TI = 0;
+  		SBUF = c;
+	}
+	echo_flag = 0;
+	return c;
+}
+
+//复写 _getkey()
+char _getkey() {
+	char c;
+  	while (!RI);
+  	c = SBUF;
+  	RI = 0;
+  	echo_flag = 1;
+  	return c;
 }

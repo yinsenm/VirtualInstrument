@@ -1,10 +1,9 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        07/21/2015  17:19:02  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        07/22/2015  21:48:18  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
-D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\1602.obj, .\Objects\bsp_prinf.obj, .\Objects\delay.obj, .\Objects\i2c.obj, .\Objec
->> ts\main.obj, .\Objects\modbus.obj, .\Objects\tm7705.obj, .\Objects\uart.obj TO .\Objects\slave PRINT (.\Listings\slav
->> e.m51) RAMSIZE (256)
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\1602.obj, .\Objects\delay.obj, .\Objects\i2c.obj, .\Objects\main.obj, .\Objects\mo
+>> dbus.obj, .\Objects\tm7705.obj, .\Objects\uart.obj TO .\Objects\slave PRINT (.\Listings\slave.m51) RAMSIZE (256)
 
 
 MEMORY MODEL: SMALL
@@ -12,37 +11,36 @@ MEMORY MODEL: SMALL
 
 INPUT MODULES INCLUDED:
   .\Objects\1602.obj (1602)
-  .\Objects\bsp_prinf.obj (BSP_PRINF)
   .\Objects\delay.obj (DELAY)
   .\Objects\i2c.obj (I2C)
   .\Objects\main.obj (MAIN)
   .\Objects\modbus.obj (MODBUS)
   .\Objects\tm7705.obj (TM7705)
   .\Objects\uart.obj (UART)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTPTR)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?ILDOPTR)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?ULSHR)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?LSHL)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (PRINTF)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (SCANF)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?ISTPTR)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?LNEG)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?LSTPTR)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?PLDIDATA)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?PLDIIDATA)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?PILDIDATA)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CCASE)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (GETCHAR)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (UNGETC)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (ISSPACE)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?LSTIDATA)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?LSTXDATA)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?LSTPDATA)
-  D:\KEIL_V5\C51\LIB\C51S.LIB (_GETKEY)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?COPY)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?ILDOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?ULSHR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LSHL)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (PRINTF)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (SCANF)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?ISTPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LNEG)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LSTPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?PLDIDATA)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?PLDIIDATA)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?PILDIDATA)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CCASE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (GETCHAR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (UNGETC)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (ISSPACE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LSTIDATA)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LSTXDATA)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LSTPDATA)
 
 
 LINK MAP OF MODULE:  .\Objects\slave (1602)
@@ -53,29 +51,27 @@ LINK MAP OF MODULE:  .\Objects\slave (1602)
 
             * * * * * * *   D A T A   M E M O R Y   * * * * * * *
             REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
-            DATA    0008H     000AH     UNIT         ?DT?_MODBUS?MODBUS
-            DATA    0012H     0008H     UNIT         ?DT?_LRC?MODBUS
-            DATA    001AH     0006H     UNIT         ?DT?_IRCVSTR?I2C
+            DATA    0008H     0007H     UNIT         ?DT?_ISENDSTR?I2C
+            DATA    000FH     0006H     UNIT         ?DT?_IRCVSTR?I2C
+            DATA    0015H     0006H     UNIT         ?DT?_TM7705_WRITEREG?TM7705
+            DATA    001BH     0004H     UNIT         ?DT?MAIN
+            DATA    001FH     0001H     UNIT         ?DT?_TM7705_SYTEMCALIBZERO?TM7705
             BIT     0020H.0   0001H.1   UNIT         _BIT_GROUP_
             BIT     0021H.1   0000H.1   UNIT         ?BI?_SENDBYTE?I2C
             BIT     0021H.2   0000H.1   UNIT         ?BI?GETCHAR
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 2
 
 
                     0021H.3   0000H.5                *** GAP ***
-            DATA    0022H     002FH     UNIT         _DATA_GROUP_
-            DATA    0051H     0007H     UNIT         ?DT?_ISENDSTR?I2C
-            DATA    0058H     0006H     UNIT         ?DT?_TM7705_WRITEREG?TM7705
-            DATA    005EH     0006H     UNIT         ?DT?_TM7705_READREG?TM7705
-            DATA    0064H     0004H     UNIT         ?DT?MAIN
-            DATA    0068H     0004H     UNIT         ?DT?_TM7705_WRITE3BYTE?TM7705
-            DATA    006CH     0004H     UNIT         ?DT?TM7705_READ3BYTE?TM7705
-            DATA    0070H     0004H     UNIT         ?DT?_TM7705_READADC?TM7705
-            DATA    0074H     0003H     UNIT         ?DT?_UART_SENDSTR?UART
-            DATA    0077H     0001H     UNIT         ?DT?_TM7705_SYTEMCALIBZERO?TM7705
-            DATA    0078H     0001H     UNIT         ?DT?_TM7705_SYTEMCALIBFULL?TM7705
-            DATA    0079H     0001H     UNIT         ?DT?GETCHAR
-            IDATA   007AH     0001H     UNIT         ?STACK
+            DATA    0022H     003BH     UNIT         _DATA_GROUP_
+            DATA    005DH     0006H     UNIT         ?DT?_TM7705_READREG?TM7705
+            DATA    0063H     0004H     UNIT         ?DT?_TM7705_WRITE3BYTE?TM7705
+            DATA    0067H     0004H     UNIT         ?DT?TM7705_READ3BYTE?TM7705
+            DATA    006BH     0004H     UNIT         ?DT?_TM7705_READADC?TM7705
+            DATA    006FH     0001H     UNIT         ?DT?_TM7705_SYTEMCALIBFULL?TM7705
+            DATA    0070H     0001H     UNIT         ?DT?UART
+            DATA    0071H     0001H     UNIT         ?DT?GETCHAR
+            IDATA   0072H     0001H     UNIT         ?STACK
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
@@ -86,61 +82,58 @@ LINK MAP OF MODULE:  .\Objects\slave (1602)
             CODE    0023H     0003H     ABSOLUTE     
             CODE    0026H     035CH     UNIT         ?PR?PRINTF?PRINTF
             CODE    0382H     0317H     UNIT         ?PR?SCANF?SCANF
-            CODE    0699H     0170H     UNIT         ?C?LIB_CODE
-            CODE    0809H     008CH     UNIT         ?C_C51STARTUP
-            CODE    0895H     0072H     UNIT         ?PR?_MODBUS?MODBUS
-            CODE    0907H     006DH     UNIT         ?PR?_TM7705_READREG?TM7705
-            CODE    0974H     005AH     UNIT         ?PR?_LRC?MODBUS
-            CODE    09CEH     0053H     UNIT         ?PR?TM7705_READ3BYTE?TM7705
-            CODE    0A21H     0052H     UNIT         ?PR?_ISENDSTR?I2C
-            CODE    0A73H     004AH     UNIT         ?PR?_IRCVSTR?I2C
-            CODE    0ABDH     003FH     UNIT         ?PR?_SENDBYTE?I2C
-            CODE    0AFCH     003AH     UNIT         ?PR?_TM7705_WRITEREG?TM7705
-            CODE    0B36H     0034H     UNIT         ?PR?MAIN?MAIN
-            CODE    0B6AH     0034H     UNIT         ?PR?_TM7705_READADC?TM7705
-            CODE    0B9EH     0031H     UNIT         ?PR?LCD_INIT?1602
-            CODE    0BCFH     002AH     UNIT         ?PR?_TM7705_WRITE3BYTE?TM7705
-            CODE    0BF9H     0025H     UNIT         ?PR?RCVBYTE?I2C
-            CODE    0C1EH     0025H     UNIT         ?PR?TM7705_RECIVE8BIT?TM7705
-            CODE    0C43H     0024H     UNIT         ?PR?_LCD_WRITE_STR?1602
-            CODE    0C67H     0024H     UNIT         ?PR?TM7705_INIT?TM7705
-            CODE    0C8BH     0024H     UNIT         ?PR?_UART_SENDSTR?UART
-            CODE    0CAFH     0023H     UNIT         ?PR?EX0_ISR?MAIN
-            CODE    0CD2H     0021H     UNIT         ?PR?TM7705_WAITDRDY?TM7705
-            CODE    0CF3H     001EH     UNIT         ?PR?_TM7705_SYTEMCALIBFULL?TM7705
-            CODE    0D11H     001BH     UNIT         ?PR?_TM7705_CALIBSELF?TM7705
-            CODE    0D2CH     001BH     UNIT         ?PR?_TM7705_SYTEMCALIBZERO?TM7705
-            CODE    0D47H     0019H     UNIT         ?PR?TM7705_SYNCSPI?TM7705
-            CODE    0D60H     0019H     UNIT         ?PR?_TM7705_SEND8BIT?TM7705
-            CODE    0D79H     0019H     UNIT         ?PR?TM7705_READ2BYTE?TM7705
-            CODE    0D92H     0017H     UNIT         ?CO?MODBUS
-            CODE    0DA9H     0017H     UNIT         ?PR?UART_INIT?UART
-            CODE    0DC0H     0016H     UNIT         ?PR?START_I2C?I2C
-            CODE    0DD6H     0015H     UNIT         ?PR?TM7705_RESETHARD?TM7705
-            CODE    0DEBH     0014H     UNIT         ?PR?EX0_INIT?MAIN
-            CODE    0DFFH     0013H     UNIT         ?PR?TIMER0_ISR?MAIN
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 3
+            CODE    0699H     0266H     UNIT         ?C?LIB_CODE
+            CODE    08FFH     008CH     UNIT         ?C_C51STARTUP
+            CODE    098BH     0084H     UNIT         ?PR?MAIN?MAIN
+            CODE    0A0FH     0072H     UNIT         ?PR?_MODBUS?MODBUS
+            CODE    0A81H     006DH     UNIT         ?PR?_TM7705_READREG?TM7705
+            CODE    0AEEH     0053H     UNIT         ?PR?TM7705_READ3BYTE?TM7705
+            CODE    0B41H     0052H     UNIT         ?PR?_ISENDSTR?I2C
+            CODE    0B93H     004AH     UNIT         ?PR?_IRCVSTR?I2C
+            CODE    0BDDH     0042H     UNIT         ?PR?_LRC?MODBUS
+            CODE    0C1FH     003FH     UNIT         ?PR?_SENDBYTE?I2C
+            CODE    0C5EH     003AH     UNIT         ?PR?_TM7705_WRITEREG?TM7705
+            CODE    0C98H     0034H     UNIT         ?PR?_TM7705_READADC?TM7705
+            CODE    0CCCH     0031H     UNIT         ?PR?LCD_INIT?1602
+            CODE    0CFDH     002AH     UNIT         ?PR?_TM7705_WRITE3BYTE?TM7705
+            CODE    0D27H     0025H     UNIT         ?PR?RCVBYTE?I2C
+            CODE    0D4CH     0025H     UNIT         ?PR?TM7705_RECIVE8BIT?TM7705
+            CODE    0D71H     0024H     UNIT         ?PR?_LCD_WRITE_STR?1602
+            CODE    0D95H     0024H     UNIT         ?PR?TM7705_INIT?TM7705
+            CODE    0DB9H     0023H     UNIT         ?PR?EX0_ISR?MAIN
+            CODE    0DDCH     0021H     UNIT         ?PR?TM7705_WAITDRDY?TM7705
+            CODE    0DFDH     001EH     UNIT         ?PR?_TM7705_SYTEMCALIBFULL?TM7705
+            CODE    0E1BH     001BH     UNIT         ?PR?_TM7705_CALIBSELF?TM7705
+            CODE    0E36H     001BH     UNIT         ?PR?_TM7705_SYTEMCALIBZERO?TM7705
+            CODE    0E51H     001AH     UNIT         ?PR?_PUTCHAR?UART
+            CODE    0E6BH     0019H     UNIT         ?PR?TM7705_SYNCSPI?TM7705
+            CODE    0E84H     0019H     UNIT         ?PR?_TM7705_SEND8BIT?TM7705
+            CODE    0E9DH     0019H     UNIT         ?PR?TM7705_READ2BYTE?TM7705
+            CODE    0EB6H     0019H     UNIT         ?PR?UART_INIT?UART
+            CODE    0ECFH     0017H     UNIT         ?CO?MODBUS
+            CODE    0EE6H     0016H     UNIT         ?PR?START_I2C?I2C
+            CODE    0EFCH     0015H     UNIT         ?PR?TM7705_RESETHARD?TM7705
+            CODE    0F11H     0014H     UNIT         ?PR?EX0_INIT?MAIN
+            CODE    0F25H     0013H     UNIT         ?PR?TIMER0_ISR?MAIN
+            CODE    0F38H     0013H     UNIT         ?CO?MAIN
+            CODE    0F4BH     0013H     UNIT         ?PR?_ISSPACE?ISSPACE
+            CODE    0F5EH     0012H     UNIT         ?PR?STOP_I2C?I2C
+            CODE    0F70H     0011H     UNIT         ?PR?_LCD_WRITE_COM?1602
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 3
 
 
-            CODE    0E12H     0013H     UNIT         ?PR?_ISSPACE?ISSPACE
-            CODE    0E25H     0012H     UNIT         ?PR?STOP_I2C?I2C
-            CODE    0E37H     0011H     UNIT         ?PR?_LCD_WRITE_COM?1602
-            CODE    0E48H     0011H     UNIT         ?PR?_LCD_WRITE_DATA?1602
-            CODE    0E59H     0011H     UNIT         ?PR?ACK_I2C?I2C
-            CODE    0E6AH     0011H     UNIT         ?PR?NO_ACK_I2C?I2C
-            CODE    0E7BH     0011H     UNIT         ?PR?GETCHAR?GETCHAR
-            CODE    0E8CH     0010H     UNIT         ?PR?LCD_CHECK_BUSY?1602
-            CODE    0E9CH     000BH     UNIT         ?C_INITSEG
-            CODE    0EA7H     000AH     UNIT         ?PR?LCD_CLEAR?1602
-            CODE    0EB1H     000AH     UNIT         ?PR?_GETKEY?_GETKEY
-            CODE    0EBBH     0008H     UNIT         ?PR?_PUTCHAR?BSP_PRINF
-            CODE    0EC3H     0008H     UNIT         ?CO?MAIN
-            CODE    0ECBH     0008H     UNIT         ?PR?_TM7705_WRITEBYTE?TM7705
-            CODE    0ED3H     0008H     UNIT         ?PR?TM7705_READBYTE?TM7705
-            CODE    0EDBH     0008H     UNIT         ?PR?_UART_SENDBYTE?UART
-            CODE    0EE3H     0008H     UNIT         ?PR?UART_GETBYTE?UART
-            CODE    0EEBH     0003H     UNIT         ?PR?_DELAYUS2X?DELAY
-            CODE    0EEEH     0001H     UNIT         ?PR?UART_ISR?UART
+            CODE    0F81H     0011H     UNIT         ?PR?_LCD_WRITE_DATA?1602
+            CODE    0F92H     0011H     UNIT         ?PR?ACK_I2C?I2C
+            CODE    0FA3H     0011H     UNIT         ?PR?NO_ACK_I2C?I2C
+            CODE    0FB4H     0011H     UNIT         ?PR?GETCHAR?GETCHAR
+            CODE    0FC5H     0010H     UNIT         ?PR?LCD_CHECK_BUSY?1602
+            CODE    0FD5H     000EH     UNIT         ?C_INITSEG
+            CODE    0FE3H     000BH     UNIT         ?PR?_GETKEY?UART
+            CODE    0FEEH     000AH     UNIT         ?PR?LCD_CLEAR?1602
+            CODE    0FF8H     0008H     UNIT         ?PR?_TM7705_WRITEBYTE?TM7705
+            CODE    1000H     0008H     UNIT         ?PR?TM7705_READBYTE?TM7705
+            CODE    1008H     0003H     UNIT         ?PR?_DELAYUS2X?DELAY
+            CODE    100BH     0001H     UNIT         ?PR?UART_ISR?UART
 
 
 
@@ -154,14 +147,14 @@ SEGMENT                                      BIT_GROUP          DATA_GROUP
   +--> ?PR?MAIN?MAIN
   +--> ?C_INITSEG
 
-?PR?MAIN?MAIN                             -----    -----      0022H    0014H
+?PR?MAIN?MAIN                             -----    -----      0022H    001DH
+  +--> ?CO?MAIN
   +--> ?PR?UART_INIT?UART
   +--> ?PR?TM7705_INIT?TM7705
   +--> ?PR?EX0_INIT?MAIN
   +--> ?PR?_TM7705_CALIBSELF?TM7705
-  +--> ?CO?MAIN
   +--> ?PR?SCANF?SCANF
-  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_MODBUS?MODBUS
 
 ?PR?TM7705_INIT?TM7705                    -----    -----      -----    -----
   +--> ?PR?TM7705_RESETHARD?TM7705
@@ -179,34 +172,38 @@ SEGMENT                                      BIT_GROUP          DATA_GROUP
 ?PR?TM7705_SYNCSPI?TM7705                 -----    -----      -----    -----
   +--> ?PR?_TM7705_SEND8BIT?TM7705
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 4
-
-
 ?PR?_TM7705_WRITEBYTE?TM7705              -----    -----      -----    -----
   +--> ?PR?_TM7705_SEND8BIT?TM7705
 
-?PR?_TM7705_CALIBSELF?TM7705              -----    -----      0036H    0001H
+?PR?_TM7705_CALIBSELF?TM7705              -----    -----      003FH    0001H
   +--> ?PR?_TM7705_WRITEBYTE?TM7705
   +--> ?PR?TM7705_WAITDRDY?TM7705
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 4
+
 
 ?PR?TM7705_WAITDRDY?TM7705                -----    -----      -----    -----
   +--> ?PR?_TM7705_WRITEBYTE?TM7705
   +--> ?PR?TM7705_SYNCSPI?TM7705
 
-?PR?SCANF?SCANF                           0020H.0  0000H.6    0036H    001AH
+?PR?SCANF?SCANF                           0020H.0  0000H.6    003FH    001AH
   +--> ?PR?GETCHAR?UNGETCHAR
   +--> ?PR?_ISSPACE?ISSPACE
   +--> ?PR?GETCHAR?GETCHAR
 
 ?PR?GETCHAR?GETCHAR                       -----    -----      -----    -----
-  +--> ?PR?_GETKEY?_GETKEY
-  +--> ?PR?_PUTCHAR?BSP_PRINF
+  +--> ?PR?_GETKEY?UART
+  +--> ?PR?_PUTCHAR?UART
 
-?PR?_PUTCHAR?BSP_PRINF                    -----    -----      0050H    0001H
-  +--> ?PR?_UART_SENDBYTE?UART
+?PR?_MODBUS?MODBUS                        -----    -----      003FH    000AH
+  +--> ?PR?_LRC?MODBUS
+  +--> ?CO?MODBUS
+  +--> ?PR?PRINTF?PRINTF
 
-?PR?PRINTF?PRINTF                         0020H.0  0001H.1    0036H    0014H
-  +--> ?PR?_PUTCHAR?BSP_PRINF
+?PR?_LRC?MODBUS                           -----    -----      0049H    0009H
+
+?PR?PRINTF?PRINTF                         0020H.0  0001H.1    0049H    0014H
+  +--> ?PR?_PUTCHAR?UART
 
 
 
@@ -224,117 +221,105 @@ SYMBOL TABLE OF MODULE:  .\Objects\slave (1602)
   D:00A8H         PUBLIC        IE
   B:00A0H.6       PUBLIC        EN
   D:00B8H         PUBLIC        IP
-  C:0E8CH         PUBLIC        LCD_Check_Busy
-  C:0EA7H         PUBLIC        LCD_Clear
-  C:0E48H         PUBLIC        _LCD_Write_Data
+  C:0FC5H         PUBLIC        LCD_Check_Busy
+  C:0FEEH         PUBLIC        LCD_Clear
+  C:0F81H         PUBLIC        _LCD_Write_Data
   B:00A0H.4       PUBLIC        RS
   B:00A0H.5       PUBLIC        RW
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:0E37H         PUBLIC        _LCD_Write_Com
-  C:0B9EH         PUBLIC        LCD_Init
-  C:0C43H         PUBLIC        _LCD_Write_Str
+  C:0F70H         PUBLIC        _LCD_Write_Com
+  C:0CCCH         PUBLIC        LCD_Init
+  C:0D71H         PUBLIC        _LCD_Write_Str
   D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
   -------         PROC          LCD_CHECK_BUSY
-  C:0E8CH         LINE#         18
-  C:0E8CH         LINE#         19
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 5
+  C:0FC5H         LINE#         18
+  C:0FC5H         LINE#         19
+  C:0FC8H         LINE#         20
+  C:0FCAH         LINE#         21
+  C:0FCCH         LINE#         22
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 5
 
 
-  C:0E8FH         LINE#         20
-  C:0E91H         LINE#         21
-  C:0E93H         LINE#         22
-  C:0E95H         LINE#         23
-  C:0E96H         LINE#         24
-  C:0E98H         LINE#         25
-  C:0E9BH         LINE#         26
+  C:0FCEH         LINE#         23
+  C:0FCFH         LINE#         24
+  C:0FD1H         LINE#         25
+  C:0FD4H         LINE#         26
   -------         ENDPROC       LCD_CHECK_BUSY
   -------         PROC          _LCD_WRITE_COM
   D:0007H         SYMBOL        com
-  C:0E37H         LINE#         31
-  C:0E37H         LINE#         32
-  C:0E3CH         LINE#         33
-  C:0E3EH         LINE#         34
-  C:0E40H         LINE#         35
-  C:0E42H         LINE#         36
-  C:0E44H         LINE#         37
-  C:0E45H         LINE#         38
-  C:0E47H         LINE#         39
+  C:0F70H         LINE#         31
+  C:0F70H         LINE#         32
+  C:0F75H         LINE#         33
+  C:0F77H         LINE#         34
+  C:0F79H         LINE#         35
+  C:0F7BH         LINE#         36
+  C:0F7DH         LINE#         37
+  C:0F7EH         LINE#         38
+  C:0F80H         LINE#         39
   -------         ENDPROC       _LCD_WRITE_COM
   -------         PROC          _LCD_WRITE_DATA
   D:0007H         SYMBOL        _data
-  C:0E48H         LINE#         44
-  C:0E48H         LINE#         45
-  C:0E4DH         LINE#         46
-  C:0E4FH         LINE#         47
-  C:0E51H         LINE#         48
-  C:0E53H         LINE#         49
-  C:0E55H         LINE#         50
-  C:0E56H         LINE#         51
-  C:0E58H         LINE#         52
+  C:0F81H         LINE#         44
+  C:0F81H         LINE#         45
+  C:0F86H         LINE#         46
+  C:0F88H         LINE#         47
+  C:0F8AH         LINE#         48
+  C:0F8CH         LINE#         49
+  C:0F8EH         LINE#         50
+  C:0F8FH         LINE#         51
+  C:0F91H         LINE#         52
   -------         ENDPROC       _LCD_WRITE_DATA
   -------         PROC          LCD_CLEAR
-  C:0EA7H         LINE#         57
-  C:0EA7H         LINE#         58
-  C:0EACH         LINE#         59
+  C:0FEEH         LINE#         57
+  C:0FEEH         LINE#         58
+  C:0FF3H         LINE#         59
   -------         ENDPROC       LCD_CLEAR
   -------         PROC          LCD_INIT
-  C:0B9EH         LINE#         65
-  C:0B9EH         LINE#         66
-  C:0BA3H         LINE#         67
-  C:0BA8H         LINE#         68
-  C:0BADH         LINE#         69
-  C:0BB2H         LINE#         71
-  C:0BB7H         LINE#         72
-  C:0BBCH         LINE#         73
-  C:0BC1H         LINE#         74
-  C:0BC6H         LINE#         75
-  C:0BCAH         LINE#         76
+  C:0CCCH         LINE#         65
+  C:0CCCH         LINE#         66
+  C:0CD1H         LINE#         67
+  C:0CD6H         LINE#         68
+  C:0CDBH         LINE#         69
+  C:0CE0H         LINE#         71
+  C:0CE5H         LINE#         72
+  C:0CEAH         LINE#         73
+  C:0CEFH         LINE#         74
+  C:0CF4H         LINE#         75
+  C:0CF8H         LINE#         76
   -------         ENDPROC       LCD_INIT
   -------         PROC          _LCD_WRITE_STR
   D:0006H         SYMBOL        x
   D:0005H         SYMBOL        y
   D:0001H         SYMBOL        str
-  C:0C43H         LINE#         82
-  C:0C45H         LINE#         83
-  C:0C48H         LINE#         84
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 6
+  C:0D71H         LINE#         82
+  C:0D73H         LINE#         83
+  C:0D76H         LINE#         84
+  C:0D79H         LINE#         85
+  C:0D7BH         LINE#         86
+  C:0D7BH         LINE#         87
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 6
 
 
-  C:0C4BH         LINE#         85
-  C:0C4DH         LINE#         86
-  C:0C4DH         LINE#         87
-  C:0C54H         LINE#         88
-  C:0C54H         LINE#         89
-  C:0C5AH         LINE#         90
-  C:0C5DH         LINE#         91
-  C:0C64H         LINE#         92
-  C:0C66H         LINE#         93
+  C:0D82H         LINE#         88
+  C:0D82H         LINE#         89
+  C:0D88H         LINE#         90
+  C:0D8BH         LINE#         91
+  C:0D92H         LINE#         92
+  C:0D94H         LINE#         93
   -------         ENDPROC       _LCD_WRITE_STR
   -------         ENDMOD        1602
-
-  -------         MODULE        BSP_PRINF
-  C:0000H         SYMBOL        _ICE_DUMMY_
-  C:0EBBH         PUBLIC        _putchar
-  -------         PROC          _PUTCHAR
-  D:0050H         SYMBOL        c
-  C:0EBBH         LINE#         3
-  C:0EBDH         LINE#         4
-  C:0EC0H         LINE#         5
-  C:0EC2H         LINE#         6
-  -------         ENDPROC       _PUTCHAR
-  -------         ENDMOD        BSP_PRINF
 
   -------         MODULE        DELAY
   C:0000H         SYMBOL        _ICE_DUMMY_
   C:000EH         PUBLIC        _DelayMs
-  C:0EEBH         PUBLIC        _DelayUs2x
+  C:1008H         PUBLIC        _DelayUs2x
   -------         PROC          _DELAYUS2X
   D:0007H         SYMBOL        t
-  C:0EEBH         LINE#         10
-  C:0EEBH         LINE#         11
-  C:0EEDH         LINE#         12
+  C:1008H         LINE#         10
+  C:1008H         LINE#         11
+  C:100AH         LINE#         12
   -------         ENDPROC       _DELAYUS2X
   -------         PROC          _DELAYMS
   D:0006H         SYMBOL        t
@@ -353,62 +338,62 @@ SYMBOL TABLE OF MODULE:  .\Objects\slave (1602)
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
   D:00A8H         PUBLIC        IE
-  C:0A21H         PUBLIC        _ISendStr
+  C:0B41H         PUBLIC        _ISendStr
   D:00B8H         PUBLIC        IP
-  C:0ABDH         PUBLIC        _SendByte
-  C:0E59H         PUBLIC        Ack_I2C
-  C:0DC0H         PUBLIC        Start_I2C
-  C:0A73H         PUBLIC        _IRcvStr
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 7
-
-
+  C:0C1FH         PUBLIC        _SendByte
+  C:0F92H         PUBLIC        Ack_I2C
+  C:0EE6H         PUBLIC        Start_I2C
+  C:0B93H         PUBLIC        _IRcvStr
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:0BF9H         PUBLIC        RcvByte
-  C:0E25H         PUBLIC        Stop_I2C
-  C:0E6AH         PUBLIC        No_Ack_I2C
+  C:0D27H         PUBLIC        RcvByte
+  C:0F5EH         PUBLIC        Stop_I2C
+  C:0FA3H         PUBLIC        No_Ack_I2C
   B:00A0H.1       PUBLIC        SDA
   B:00A0H.0       PUBLIC        SCL
   D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
   -------         PROC          START_I2C
-  C:0DC0H         LINE#         15
-  C:0DC0H         LINE#         16
-  C:0DC2H         LINE#         17
-  C:0DC3H         LINE#         18
-  C:0DC5H         LINE#         19
-  C:0DC6H         LINE#         20
-  C:0DC7H         LINE#         21
-  C:0DC8H         LINE#         22
-  C:0DC9H         LINE#         23
-  C:0DCAH         LINE#         24
-  C:0DCCH         LINE#         25
-  C:0DCDH         LINE#         26
-  C:0DCEH         LINE#         27
-  C:0DCFH         LINE#         28
-  C:0DD0H         LINE#         29
-  C:0DD1H         LINE#         30
-  C:0DD3H         LINE#         31
-  C:0DD4H         LINE#         32
-  C:0DD5H         LINE#         33
+  C:0EE6H         LINE#         15
+  C:0EE6H         LINE#         16
+  C:0EE8H         LINE#         17
+  C:0EE9H         LINE#         18
+  C:0EEBH         LINE#         19
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 7
+
+
+  C:0EECH         LINE#         20
+  C:0EEDH         LINE#         21
+  C:0EEEH         LINE#         22
+  C:0EEFH         LINE#         23
+  C:0EF0H         LINE#         24
+  C:0EF2H         LINE#         25
+  C:0EF3H         LINE#         26
+  C:0EF4H         LINE#         27
+  C:0EF5H         LINE#         28
+  C:0EF6H         LINE#         29
+  C:0EF7H         LINE#         30
+  C:0EF9H         LINE#         31
+  C:0EFAH         LINE#         32
+  C:0EFBH         LINE#         33
   -------         ENDPROC       START_I2C
   -------         PROC          STOP_I2C
-  C:0E25H         LINE#         38
-  C:0E25H         LINE#         39
-  C:0E27H         LINE#         40
-  C:0E28H         LINE#         41
-  C:0E2AH         LINE#         42
-  C:0E2BH         LINE#         43
-  C:0E2CH         LINE#         44
-  C:0E2DH         LINE#         45
-  C:0E2EH         LINE#         46
-  C:0E2FH         LINE#         47
-  C:0E31H         LINE#         48
-  C:0E32H         LINE#         49
-  C:0E33H         LINE#         50
-  C:0E34H         LINE#         51
-  C:0E35H         LINE#         52
-  C:0E36H         LINE#         53
+  C:0F5EH         LINE#         38
+  C:0F5EH         LINE#         39
+  C:0F60H         LINE#         40
+  C:0F61H         LINE#         41
+  C:0F63H         LINE#         42
+  C:0F64H         LINE#         43
+  C:0F65H         LINE#         44
+  C:0F66H         LINE#         45
+  C:0F67H         LINE#         46
+  C:0F68H         LINE#         47
+  C:0F6AH         LINE#         48
+  C:0F6BH         LINE#         49
+  C:0F6CH         LINE#         50
+  C:0F6DH         LINE#         51
+  C:0F6EH         LINE#         52
+  C:0F6FH         LINE#         53
   -------         ENDPROC       STOP_I2C
   -------         PROC          _SENDBYTE
   D:0007H         SYMBOL        c
@@ -416,164 +401,164 @@ SYMBOL TABLE OF MODULE:  .\Objects\slave (1602)
   D:0006H         SYMBOL        BitCnt
   B:0021H.1       SYMBOL        ack
   -------         ENDDO         
-  C:0ABDH         LINE#         60
-  C:0ABDH         LINE#         62
-  C:0ABFH         LINE#         63
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 8
+  C:0C1FH         LINE#         60
+  C:0C1FH         LINE#         62
+  C:0C21H         LINE#         63
+  C:0C23H         LINE#         64
+  C:0C30H         LINE#         65
+  C:0C34H         LINE#         67
+  C:0C36H         LINE#         68
+  C:0C37H         LINE#         69
+  C:0C39H         LINE#         70
+  C:0C3AH         LINE#         71
+  C:0C3BH         LINE#         72
+  C:0C3CH         LINE#         73
+  C:0C3DH         LINE#         74
+  C:0C3EH         LINE#         75
+  C:0C40H         LINE#         76
+  C:0C44H         LINE#         78
+  C:0C45H         LINE#         79
+  C:0C46H         LINE#         80
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 8
 
 
-  C:0AC1H         LINE#         64
-  C:0ACEH         LINE#         65
-  C:0AD2H         LINE#         67
-  C:0AD4H         LINE#         68
-  C:0AD5H         LINE#         69
-  C:0AD7H         LINE#         70
-  C:0AD8H         LINE#         71
-  C:0AD9H         LINE#         72
-  C:0ADAH         LINE#         73
-  C:0ADBH         LINE#         74
-  C:0ADCH         LINE#         75
-  C:0ADEH         LINE#         76
-  C:0AE2H         LINE#         78
-  C:0AE3H         LINE#         79
-  C:0AE4H         LINE#         80
-  C:0AE6H         LINE#         81
-  C:0AE7H         LINE#         82
-  C:0AE8H         LINE#         83
-  C:0AEAH         LINE#         84
-  C:0AEBH         LINE#         85
-  C:0AECH         LINE#         86
-  C:0AEDH         LINE#         87
-  C:0AF0H         LINE#         88
-  C:0AF4H         LINE#         90
-  C:0AF6H         LINE#         91
-  C:0AF8H         LINE#         92
-  C:0AF9H         LINE#         93
-  C:0AFBH         LINE#         94
+  C:0C48H         LINE#         81
+  C:0C49H         LINE#         82
+  C:0C4AH         LINE#         83
+  C:0C4CH         LINE#         84
+  C:0C4DH         LINE#         85
+  C:0C4EH         LINE#         86
+  C:0C4FH         LINE#         87
+  C:0C52H         LINE#         88
+  C:0C56H         LINE#         90
+  C:0C58H         LINE#         91
+  C:0C5AH         LINE#         92
+  C:0C5BH         LINE#         93
+  C:0C5DH         LINE#         94
   -------         ENDPROC       _SENDBYTE
   -------         PROC          RCVBYTE
   -------         DO            
   D:0007H         SYMBOL        retc
   D:0006H         SYMBOL        BitCnt
   -------         ENDDO         
-  C:0BF9H         LINE#         100
-  C:0BF9H         LINE#         101
-  C:0BFBH         LINE#         104
-  C:0BFDH         LINE#         105
-  C:0BFEH         LINE#         106
-  C:0BFFH         LINE#         107
-  C:0C01H         LINE#         108
-  C:0C02H         LINE#         109
-  C:0C03H         LINE#         110
-  C:0C04H         LINE#         111
-  C:0C05H         LINE#         112
-  C:0C06H         LINE#         113
-  C:0C07H         LINE#         114
-  C:0C09H         LINE#         115
-  C:0C0AH         LINE#         116
-  C:0C0BH         LINE#         117
-  C:0C0FH         LINE#         118
-  C:0C12H         LINE#         119
-  C:0C13H         LINE#         120
-  C:0C14H         LINE#         121
-  C:0C15H         LINE#         122
-  C:0C19H         LINE#         123
-  C:0C1BH         LINE#         124
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 9
-
-
-  C:0C1CH         LINE#         125
-  C:0C1DH         LINE#         126
-  C:0C1DH         LINE#         127
+  C:0D27H         LINE#         100
+  C:0D27H         LINE#         101
+  C:0D29H         LINE#         104
+  C:0D2BH         LINE#         105
+  C:0D2CH         LINE#         106
+  C:0D2DH         LINE#         107
+  C:0D2FH         LINE#         108
+  C:0D30H         LINE#         109
+  C:0D31H         LINE#         110
+  C:0D32H         LINE#         111
+  C:0D33H         LINE#         112
+  C:0D34H         LINE#         113
+  C:0D35H         LINE#         114
+  C:0D37H         LINE#         115
+  C:0D38H         LINE#         116
+  C:0D39H         LINE#         117
+  C:0D3DH         LINE#         118
+  C:0D40H         LINE#         119
+  C:0D41H         LINE#         120
+  C:0D42H         LINE#         121
+  C:0D43H         LINE#         122
+  C:0D47H         LINE#         123
+  C:0D49H         LINE#         124
+  C:0D4AH         LINE#         125
+  C:0D4BH         LINE#         126
+  C:0D4BH         LINE#         127
   -------         ENDPROC       RCVBYTE
   -------         PROC          ACK_I2C
-  C:0E59H         LINE#         132
-  C:0E59H         LINE#         133
-  C:0E5BH         LINE#         134
-  C:0E5CH         LINE#         135
-  C:0E5DH         LINE#         136
-  C:0E5EH         LINE#         137
-  C:0E60H         LINE#         138
-  C:0E61H         LINE#         139
-  C:0E62H         LINE#         140
-  C:0E63H         LINE#         141
-  C:0E64H         LINE#         142
-  C:0E65H         LINE#         143
-  C:0E67H         LINE#         144
-  C:0E68H         LINE#         145
-  C:0E69H         LINE#         146
+  C:0F92H         LINE#         132
+  C:0F92H         LINE#         133
+  C:0F94H         LINE#         134
+  C:0F95H         LINE#         135
+  C:0F96H         LINE#         136
+  C:0F97H         LINE#         137
+  C:0F99H         LINE#         138
+  C:0F9AH         LINE#         139
+  C:0F9BH         LINE#         140
+  C:0F9CH         LINE#         141
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 9
+
+
+  C:0F9DH         LINE#         142
+  C:0F9EH         LINE#         143
+  C:0FA0H         LINE#         144
+  C:0FA1H         LINE#         145
+  C:0FA2H         LINE#         146
   -------         ENDPROC       ACK_I2C
   -------         PROC          NO_ACK_I2C
-  C:0E6AH         LINE#         151
-  C:0E6AH         LINE#         152
-  C:0E6CH         LINE#         153
-  C:0E6DH         LINE#         154
-  C:0E6EH         LINE#         155
-  C:0E6FH         LINE#         156
-  C:0E71H         LINE#         157
-  C:0E72H         LINE#         158
-  C:0E73H         LINE#         159
-  C:0E74H         LINE#         160
-  C:0E75H         LINE#         161
-  C:0E76H         LINE#         162
-  C:0E78H         LINE#         163
-  C:0E79H         LINE#         164
-  C:0E7AH         LINE#         165
+  C:0FA3H         LINE#         151
+  C:0FA3H         LINE#         152
+  C:0FA5H         LINE#         153
+  C:0FA6H         LINE#         154
+  C:0FA7H         LINE#         155
+  C:0FA8H         LINE#         156
+  C:0FAAH         LINE#         157
+  C:0FABH         LINE#         158
+  C:0FACH         LINE#         159
+  C:0FADH         LINE#         160
+  C:0FAEH         LINE#         161
+  C:0FAFH         LINE#         162
+  C:0FB1H         LINE#         163
+  C:0FB2H         LINE#         164
+  C:0FB3H         LINE#         165
   -------         ENDPROC       NO_ACK_I2C
   -------         PROC          _ISENDSTR
-  D:0051H         SYMBOL        sla
-  D:0052H         SYMBOL        suba
-  D:0053H         SYMBOL        s
-  D:0056H         SYMBOL        num
+  D:0008H         SYMBOL        sla
+  D:0009H         SYMBOL        suba
+  D:000AH         SYMBOL        s
+  D:000DH         SYMBOL        num
   -------         DO            
-  D:0057H         SYMBOL        i
+  D:000EH         SYMBOL        i
   -------         ENDDO         
-  C:0A21H         LINE#         175
-  C:0A2BH         LINE#         177
-  C:0A35H         LINE#         178
-  C:0A38H         LINE#         179
-  C:0A3FH         LINE#         180
-  C:0A40H         LINE#         181
-  C:0A47H         LINE#         182
-  C:0A48H         LINE#         183
-  C:0A57H         LINE#         184
-  C:0A58H         LINE#         185
-  C:0A5BH         LINE#         186
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 10
-
-
-  C:0A60H         LINE#         187
-  C:0A6BH         LINE#         188
-  C:0A6DH         LINE#         189
-  C:0A71H         LINE#         190
-  C:0A72H         LINE#         191
+  C:0B41H         LINE#         175
+  C:0B4BH         LINE#         177
+  C:0B55H         LINE#         178
+  C:0B58H         LINE#         179
+  C:0B5FH         LINE#         180
+  C:0B60H         LINE#         181
+  C:0B67H         LINE#         182
+  C:0B68H         LINE#         183
+  C:0B77H         LINE#         184
+  C:0B78H         LINE#         185
+  C:0B7BH         LINE#         186
+  C:0B80H         LINE#         187
+  C:0B8BH         LINE#         188
+  C:0B8DH         LINE#         189
+  C:0B91H         LINE#         190
+  C:0B92H         LINE#         191
   -------         ENDPROC       _ISENDSTR
   -------         PROC          _IRCVSTR
   D:0004H         SYMBOL        sla
   D:0005H         SYMBOL        suba
   D:0001H         SYMBOL        s
-  D:001FH         SYMBOL        num
+  D:0014H         SYMBOL        num
   -------         DO            
   D:0005H         SYMBOL        i
   -------         ENDDO         
-  C:0A73H         LINE#         201
-  C:0A75H         LINE#         203
-  C:0A78H         LINE#         204
-  C:0A7DH         LINE#         205
-  C:0A7EH         LINE#         206
-  C:0A85H         LINE#         207
-  C:0A86H         LINE#         209
-  C:0A8EH         LINE#         210
-  C:0A8FH         LINE#         211
-  C:0A9AH         LINE#         212
-  C:0AA1H         LINE#         213
-  C:0AA4H         LINE#         214
-  C:0AABH         LINE#         215
-  C:0AAEH         LINE#         216
-  C:0AB5H         LINE#         217
-  C:0AB8H         LINE#         218
-  C:0ABBH         LINE#         219
-  C:0ABCH         LINE#         220
+  C:0B93H         LINE#         201
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 10
+
+
+  C:0B95H         LINE#         203
+  C:0B98H         LINE#         204
+  C:0B9DH         LINE#         205
+  C:0B9EH         LINE#         206
+  C:0BA5H         LINE#         207
+  C:0BA6H         LINE#         209
+  C:0BAEH         LINE#         210
+  C:0BAFH         LINE#         211
+  C:0BBAH         LINE#         212
+  C:0BC1H         LINE#         213
+  C:0BC4H         LINE#         214
+  C:0BCBH         LINE#         215
+  C:0BCEH         LINE#         216
+  C:0BD5H         LINE#         217
+  C:0BD8H         LINE#         218
+  C:0BDBH         LINE#         219
+  C:0BDCH         LINE#         220
   -------         ENDPROC       _IRCVSTR
   -------         ENDMOD        I2C
 
@@ -581,123 +566,134 @@ SYMBOL TABLE OF MODULE:  .\Objects\slave (1602)
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0090H         PUBLIC        P1
   D:00B0H         PUBLIC        P3
-  C:0DFFH         PUBLIC        Timer0_ISR
+  C:0F25H         PUBLIC        Timer0_ISR
   B:00A8H.7       PUBLIC        EA
-  D:0064H         PUBLIC        ex0_flag
+  D:001BH         PUBLIC        ex0_flag
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  C:0CAFH         PUBLIC        EX0_ISR
-  C:0B36H         PUBLIC        main
-  D:0065H         PUBLIC        count
-  D:0067H         PUBLIC        cal_flag
+  C:0DB9H         PUBLIC        EX0_ISR
+  C:098BH         PUBLIC        main
+  D:001CH         PUBLIC        count
+  D:001EH         PUBLIC        cal_flag
   D:0098H         PUBLIC        SCON
   D:0089H         PUBLIC        TMOD
   D:0088H         PUBLIC        TCON
-  C:0DEBH         PUBLIC        EX0_Init
+  C:0F43H         SYMBOL        _?ix1000
+  C:0F11H         PUBLIC        EX0_Init
   B:00A8H.1       PUBLIC        ET0
   D:008CH         PUBLIC        TH0
   B:00A8H.0       PUBLIC        EX0
   B:0088H.0       PUBLIC        IT0
   D:008AH         PUBLIC        TL0
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 11
-
-
   B:0088H.4       PUBLIC        TR0
   D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
   -------         PROC          EX0_INIT
-  C:0DEBH         LINE#         14
-  C:0DEBH         LINE#         15
-  C:0DEDH         LINE#         16
-  C:0DEFH         LINE#         17
-  C:0DF2H         LINE#         18
-  C:0DF5H         LINE#         19
-  C:0DF8H         LINE#         20
-  C:0DFAH         LINE#         21
-  C:0DFCH         LINE#         22
-  C:0DFEH         LINE#         23
+  C:0F11H         LINE#         16
+  C:0F11H         LINE#         17
+  C:0F13H         LINE#         18
+  C:0F15H         LINE#         19
+  C:0F18H         LINE#         20
+  C:0F1BH         LINE#         21
+  C:0F1EH         LINE#         22
+  C:0F20H         LINE#         23
+  C:0F22H         LINE#         24
+  C:0F24H         LINE#         25
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 11
+
+
   -------         ENDPROC       EX0_INIT
   -------         PROC          EX0_ISR
-  C:0CAFH         LINE#         25
-  C:0CB3H         LINE#         26
-  C:0CB5H         LINE#         27
-  C:0CBAH         LINE#         28
-  C:0CBCH         LINE#         29
-  C:0CBFH         LINE#         30
-  C:0CC2H         LINE#         31
-  C:0CC2H         LINE#         32
-  C:0CC5H         LINE#         33
-  C:0CC7H         LINE#         34
-  C:0CCAH         LINE#         35
-  C:0CCDH         LINE#         36
-  C:0CCDH         LINE#         37
-  C:0CCDH         LINE#         38
+  C:0DB9H         LINE#         27
+  C:0DBDH         LINE#         28
+  C:0DBFH         LINE#         29
+  C:0DC4H         LINE#         30
+  C:0DC6H         LINE#         31
+  C:0DC9H         LINE#         32
+  C:0DCCH         LINE#         33
+  C:0DCCH         LINE#         34
+  C:0DCFH         LINE#         35
+  C:0DD1H         LINE#         36
+  C:0DD4H         LINE#         37
+  C:0DD7H         LINE#         38
+  C:0DD7H         LINE#         39
+  C:0DD7H         LINE#         40
   -------         ENDPROC       EX0_ISR
   -------         PROC          TIMER0_ISR
-  C:0DFFH         LINE#         40
-  C:0E01H         LINE#         41
-  C:0E09H         LINE#         42
-  C:0E0CH         LINE#         43
-  C:0E0FH         LINE#         44
+  C:0F25H         LINE#         42
+  C:0F27H         LINE#         43
+  C:0F2FH         LINE#         44
+  C:0F32H         LINE#         45
+  C:0F35H         LINE#         46
   -------         ENDPROC       TIMER0_ISR
   -------         PROC          MAIN
   -------         DO            
-  D:0022H         SYMBOL        Str
+  D:0022H         SYMBOL        pData
+  D:002AH         SYMBOL        addr
+  D:002CH         SYMBOL        frc
+  D:002EH         SYMBOL        buf
   -------         ENDDO         
-  C:0B36H         LINE#         46
-  C:0B36H         LINE#         50
-  C:0B39H         LINE#         51
-  C:0B3CH         LINE#         52
-  C:0B3FH         LINE#         54
-  C:0B44H         LINE#         55
-  C:0B49H         LINE#         56
-  C:0B49H         LINE#         75
-  C:0B5FH         LINE#         76
-  C:0B68H         LINE#         77
-  C:0B68H         LINE#         78
+  C:098BH         LINE#         48
+  C:098BH         LINE#         49
+  C:099EH         LINE#         53
+  C:09A1H         LINE#         54
+  C:09A4H         LINE#         55
+  C:09A7H         LINE#         57
+  C:09ACH         LINE#         58
+  C:09B1H         LINE#         59
+  C:09B1H         LINE#         81
+  C:09C7H         LINE#         82
+  C:09CCH         LINE#         83
+  C:09F4H         LINE#         84
+  C:09FCH         LINE#         85
+  C:0A0DH         LINE#         86
+  C:0A0DH         LINE#         87
+  C:0A0DH         LINE#         88
+  C:0A0DH         LINE#         89
+  C:0A0DH         LINE#         90
   -------         ENDPROC       MAIN
   -------         ENDMOD        MAIN
 
   -------         MODULE        MODBUS
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 12
-
-
   C:0000H         SYMBOL        _ICE_DUMMY_
-  C:0895H         PUBLIC        _MODBUS
-  C:0974H         PUBLIC        _LRC
+  C:0A0FH         PUBLIC        _MODBUS
+  C:0BDDH         PUBLIC        _LRC
   -------         PROC          _MODBUS
-  D:0008H         SYMBOL        pData
-  D:000BH         SYMBOL        addr
-  D:000DH         SYMBOL        frc
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 12
+
+
+  D:003FH         SYMBOL        pData
+  D:0042H         SYMBOL        addr
+  D:0044H         SYMBOL        frc
   -------         DO            
-  D:000FH         SYMBOL        i
-  D:0010H         SYMBOL        lrc
+  D:0046H         SYMBOL        i
+  D:0047H         SYMBOL        temp
   -------         ENDDO         
-  C:0895H         LINE#         6
-  C:089FH         LINE#         9
-  C:08ACH         LINE#         10
-  C:08B5H         LINE#         11
-  C:08CAH         LINE#         12
-  C:08CDH         LINE#         13
-  C:08EFH         LINE#         14
-  C:08F8H         LINE#         15
+  C:0A0FH         LINE#         6
+  C:0A19H         LINE#         8
+  C:0A26H         LINE#         9
+  C:0A2FH         LINE#         10
+  C:0A44H         LINE#         11
+  C:0A47H         LINE#         12
+  C:0A69H         LINE#         13
+  C:0A72H         LINE#         14
   -------         ENDPROC       _MODBUS
   -------         PROC          _LRC
-  D:0012H         SYMBOL        pData
-  D:0006H         SYMBOL        addr
-  D:0017H         SYMBOL        frc
+  D:0049H         SYMBOL        pData
+  D:0004H         SYMBOL        addr
+  D:004EH         SYMBOL        frc
   -------         DO            
-  D:0004H         SYMBOL        lrc
-  D:0019H         SYMBOL        i
+  D:0050H         SYMBOL        lrc
+  D:0051H         SYMBOL        i
   -------         ENDDO         
-  C:0974H         LINE#         18
-  C:097EH         LINE#         19
-  C:0981H         LINE#         21
-  C:098FH         LINE#         22
-  C:0992H         LINE#         23
-  C:09B9H         LINE#         24
-  C:09C0H         LINE#         25
-  C:09CDH         LINE#         26
+  C:0BDDH         LINE#         17
+  C:0BE3H         LINE#         18
+  C:0BE6H         LINE#         21
+  C:0BEDH         LINE#         22
+  C:0BF0H         LINE#         23
+  C:0C0DH         LINE#         24
+  C:0C14H         LINE#         25
+  C:0C1EH         LINE#         26
   -------         ENDPROC       _LRC
   -------         ENDMOD        MODBUS
 
@@ -706,88 +702,88 @@ SYMBOL TABLE OF MODULE:  .\Objects\slave (1602)
   D:0090H         PUBLIC        P1
   D:00B0H         PUBLIC        P3
   B:0090H.1       PUBLIC        RESET
-  C:0AFCH         PUBLIC        _TM7705_WriteReg
+  C:0C5EH         PUBLIC        _TM7705_WriteReg
   D:00A8H         PUBLIC        IE
-  C:0C2FH         SYMBOL        TM7705_Recive8Bit
+  C:0D5DH         SYMBOL        TM7705_Recive8Bit
   B:0090H.0       PUBLIC        CS
   D:00B8H         PUBLIC        IP
-  C:0D79H         SYMBOL        TM7705_Read2Byte
-  C:09CEH         SYMBOL        TM7705_Read3Byte
-  C:0CD5H         SYMBOL        TM7705_WaitDRDY
-  C:0BCFH         SYMBOL        _TM7705_Write3Byte
+  C:0E9DH         SYMBOL        TM7705_Read2Byte
+  C:0AEEH         SYMBOL        TM7705_Read3Byte
+  C:0DDFH         SYMBOL        TM7705_WaitDRDY
+  C:0CFDH         SYMBOL        _TM7705_Write3Byte
   B:0090H.5       PUBLIC        DRDY
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:0D60H         SYMBOL        _TM7705_Send8Bit
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 13
-
-
+  C:0E84H         SYMBOL        _TM7705_Send8Bit
   B:0090H.4       PUBLIC        DOUT
-  C:0D11H         PUBLIC        _TM7705_CalibSelf
+  C:0E1BH         PUBLIC        _TM7705_CalibSelf
   B:0090H.2       PUBLIC        DIN
-  C:0DD6H         SYMBOL        TM7705_ResetHard
-  C:0B6AH         PUBLIC        _TM7705_ReadAdc
-  C:0CF3H         PUBLIC        _TM7705_SytemCalibFull
+  C:0EFCH         SYMBOL        TM7705_ResetHard
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 13
+
+
+  C:0C98H         PUBLIC        _TM7705_ReadAdc
+  C:0DFDH         PUBLIC        _TM7705_SytemCalibFull
   B:0090H.3       PUBLIC        SCK
-  C:0D47H         SYMBOL        TM7705_SyncSPI
+  C:0E6BH         SYMBOL        TM7705_SyncSPI
   D:00C8H         PUBLIC        T2CON
-  C:0ED3H         SYMBOL        TM7705_ReadByte
-  C:0C67H         PUBLIC        TM7705_Init
-  C:0D2CH         PUBLIC        _TM7705_SytemCalibZero
-  C:0907H         PUBLIC        _TM7705_ReadReg
+  C:1000H         SYMBOL        TM7705_ReadByte
+  C:0D95H         PUBLIC        TM7705_Init
+  C:0E36H         PUBLIC        _TM7705_SytemCalibZero
+  C:0A81H         PUBLIC        _TM7705_ReadReg
   D:00D0H         PUBLIC        PSW
-  C:0ECBH         SYMBOL        _TM7705_WriteByte
+  C:0FF8H         SYMBOL        _TM7705_WriteByte
   -------         PROC          TM7705_INIT
-  C:0C67H         LINE#         148
-  C:0C67H         LINE#         149
-  C:0C6AH         LINE#         150
-  C:0C6FH         LINE#         152
-  C:0C72H         LINE#         153
-  C:0C77H         LINE#         157
-  C:0C7CH         LINE#         159
-  C:0C81H         LINE#         163
-  C:0C86H         LINE#         165
+  C:0D95H         LINE#         148
+  C:0D95H         LINE#         149
+  C:0D98H         LINE#         150
+  C:0D9DH         LINE#         152
+  C:0DA0H         LINE#         153
+  C:0DA5H         LINE#         157
+  C:0DAAH         LINE#         159
+  C:0DAFH         LINE#         163
+  C:0DB4H         LINE#         165
   -------         ENDPROC       TM7705_INIT
   -------         PROC          TM7705_RESETHARD
-  C:0DD6H         LINE#         169
-  C:0DD6H         LINE#         170
-  C:0DD8H         LINE#         171
-  C:0DDDH         LINE#         172
-  C:0DDFH         LINE#         173
-  C:0DE4H         LINE#         174
-  C:0DE6H         LINE#         175
+  C:0EFCH         LINE#         169
+  C:0EFCH         LINE#         170
+  C:0EFEH         LINE#         171
+  C:0F03H         LINE#         172
+  C:0F05H         LINE#         173
+  C:0F0AH         LINE#         174
+  C:0F0CH         LINE#         175
   -------         ENDPROC       TM7705_RESETHARD
   -------         PROC          TM7705_SYNCSPI
-  C:0D47H         LINE#         179
-  C:0D47H         LINE#         181
-  C:0D49H         LINE#         182
-  C:0D4EH         LINE#         183
-  C:0D53H         LINE#         184
-  C:0D58H         LINE#         185
-  C:0D5DH         LINE#         186
-  C:0D5FH         LINE#         187
+  C:0E6BH         LINE#         179
+  C:0E6BH         LINE#         181
+  C:0E6DH         LINE#         182
+  C:0E72H         LINE#         183
+  C:0E77H         LINE#         184
+  C:0E7CH         LINE#         185
+  C:0E81H         LINE#         186
+  C:0E83H         LINE#         187
   -------         ENDPROC       TM7705_SYNCSPI
   -------         PROC          _TM7705_SEND8BIT
   D:0007H         SYMBOL        _data
   -------         DO            
   D:0006H         SYMBOL        i
   -------         ENDDO         
-  C:0D60H         LINE#         190
-  C:0D60H         LINE#         193
-  C:0D62H         LINE#         194
-  C:0D66H         LINE#         195
-  C:0D68H         LINE#         196
-  C:0D6AH         LINE#         197
-  C:0D6AH         LINE#         198
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 14
+  C:0E84H         LINE#         190
+  C:0E84H         LINE#         193
+  C:0E86H         LINE#         194
+  C:0E8AH         LINE#         195
+  C:0E8CH         LINE#         196
+  C:0E8EH         LINE#         197
+  C:0E8EH         LINE#         198
+  C:0E90H         LINE#         199
+  C:0E90H         LINE#         200
+  C:0E92H         LINE#         201
+  C:0E96H         LINE#         202
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 14
 
 
-  C:0D6CH         LINE#         199
-  C:0D6CH         LINE#         200
-  C:0D6EH         LINE#         201
-  C:0D72H         LINE#         202
-  C:0D74H         LINE#         203
-  C:0D78H         LINE#         204
+  C:0E98H         LINE#         203
+  C:0E9CH         LINE#         204
   -------         ENDPROC       _TM7705_SEND8BIT
   -------         PROC          L?0079
   -------         ENDPROC       L?0079
@@ -796,79 +792,79 @@ SYMBOL TABLE OF MODULE:  .\Objects\slave (1602)
   D:0006H         SYMBOL        i
   D:0007H         SYMBOL        retc
   -------         ENDDO         
-  C:0C2FH         LINE#         207
-  C:0C2FH         LINE#         209
-  C:0C31H         LINE#         211
-  C:0C32H         LINE#         212
-  C:0C34H         LINE#         213
-  C:0C38H         LINE#         214
-  C:0C3BH         LINE#         215
-  C:0C3CH         LINE#         216
-  C:0C3CH         LINE#         217
-  C:0C3EH         LINE#         218
-  C:0C42H         LINE#         219
-  C:0C42H         LINE#         220
+  C:0D5DH         LINE#         207
+  C:0D5DH         LINE#         209
+  C:0D5FH         LINE#         211
+  C:0D60H         LINE#         212
+  C:0D62H         LINE#         213
+  C:0D66H         LINE#         214
+  C:0D69H         LINE#         215
+  C:0D6AH         LINE#         216
+  C:0D6AH         LINE#         217
+  C:0D6CH         LINE#         218
+  C:0D70H         LINE#         219
+  C:0D70H         LINE#         220
   -------         ENDPROC       TM7705_RECIVE8BIT
   -------         PROC          _TM7705_WRITEBYTE
   D:0007H         SYMBOL        _data
-  C:0ECBH         LINE#         223
-  C:0ECBH         LINE#         224
-  C:0ECDH         LINE#         225
-  C:0ED0H         LINE#         226
-  C:0ED2H         LINE#         227
+  C:0FF8H         LINE#         223
+  C:0FF8H         LINE#         224
+  C:0FFAH         LINE#         225
+  C:0FFDH         LINE#         226
+  C:0FFFH         LINE#         227
   -------         ENDPROC       _TM7705_WRITEBYTE
   -------         PROC          _TM7705_WRITE3BYTE
-  D:0068H         SYMBOL        _data
-  C:0BCFH         LINE#         230
-  C:0BD7H         LINE#         231
-  C:0BD7H         LINE#         232
-  C:0BD9H         LINE#         233
-  C:0BE1H         LINE#         234
-  C:0BF1H         LINE#         235
-  C:0BF6H         LINE#         236
-  C:0BF8H         LINE#         237
+  D:0063H         SYMBOL        _data
+  C:0CFDH         LINE#         230
+  C:0D05H         LINE#         231
+  C:0D05H         LINE#         232
+  C:0D07H         LINE#         233
+  C:0D0FH         LINE#         234
+  C:0D1FH         LINE#         235
+  C:0D24H         LINE#         236
+  C:0D26H         LINE#         237
   -------         ENDPROC       _TM7705_WRITE3BYTE
   -------         PROC          TM7705_READBYTE
   -------         DO            
   D:0007H         SYMBOL        read
   -------         ENDDO         
-  C:0ED3H         LINE#         241
-  C:0ED3H         LINE#         244
-  C:0ED5H         LINE#         245
-  C:0ED8H         LINE#         246
-  C:0EDAH         LINE#         248
-  C:0EDAH         LINE#         249
+  C:1000H         LINE#         241
+  C:1000H         LINE#         244
+  C:1002H         LINE#         245
+  C:1005H         LINE#         246
+  C:1007H         LINE#         248
+  C:1007H         LINE#         249
   -------         ENDPROC       TM7705_READBYTE
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 15
-
-
   -------         PROC          TM7705_READ2BYTE
   -------         DO            
   D:0004H         SYMBOL        read
   -------         ENDDO         
-  C:0D79H         LINE#         252
-  C:0D79H         LINE#         255
-  C:0D7BH         LINE#         256
-  C:0D80H         LINE#         257
-  C:0D84H         LINE#         258
-  C:0D8CH         LINE#         259
-  C:0D8EH         LINE#         261
-  C:0D91H         LINE#         262
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 15
+
+
+  C:0E9DH         LINE#         252
+  C:0E9DH         LINE#         255
+  C:0E9FH         LINE#         256
+  C:0EA4H         LINE#         257
+  C:0EA8H         LINE#         258
+  C:0EB0H         LINE#         259
+  C:0EB2H         LINE#         261
+  C:0EB5H         LINE#         262
   -------         ENDPROC       TM7705_READ2BYTE
   -------         PROC          TM7705_READ3BYTE
   -------         DO            
-  D:006CH         SYMBOL        read
+  D:0067H         SYMBOL        read
   -------         ENDDO         
-  C:09CEH         LINE#         265
-  C:09CEH         LINE#         268
-  C:09D0H         LINE#         269
-  C:09DCH         LINE#         270
-  C:09DEH         LINE#         271
-  C:09F9H         LINE#         272
-  C:09FCH         LINE#         273
-  C:0A17H         LINE#         274
-  C:0A19H         LINE#         276
-  C:0A20H         LINE#         277
+  C:0AEEH         LINE#         265
+  C:0AEEH         LINE#         268
+  C:0AF0H         LINE#         269
+  C:0AFCH         LINE#         270
+  C:0AFEH         LINE#         271
+  C:0B19H         LINE#         272
+  C:0B1CH         LINE#         273
+  C:0B37H         LINE#         274
+  C:0B39H         LINE#         276
+  C:0B40H         LINE#         277
   -------         ENDPROC       TM7705_READ3BYTE
   -------         PROC          L?0080
   -------         ENDPROC       L?0080
@@ -876,158 +872,158 @@ SYMBOL TABLE OF MODULE:  .\Objects\slave (1602)
   -------         DO            
   D:0006H         SYMBOL        i
   -------         ENDDO         
-  C:0CD5H         LINE#         280
-  C:0CD5H         LINE#         283
-  C:0CD8H         LINE#         284
-  C:0CDBH         LINE#         285
-  C:0CDBH         LINE#         286
-  C:0CDBH         LINE#         287
-  C:0CE6H         LINE#         289
-  C:0CEFH         LINE#         293
-  C:0CF2H         LINE#         295
-  C:0CF2H         LINE#         296
+  C:0DDFH         LINE#         280
+  C:0DDFH         LINE#         283
+  C:0DE2H         LINE#         284
+  C:0DE5H         LINE#         285
+  C:0DE5H         LINE#         286
+  C:0DE5H         LINE#         287
+  C:0DF0H         LINE#         289
+  C:0DF9H         LINE#         293
+  C:0DFCH         LINE#         295
+  C:0DFCH         LINE#         296
   -------         ENDPROC       TM7705_WAITDRDY
   -------         PROC          _TM7705_WRITEREG
   D:0007H         SYMBOL        _RegID
-  D:0059H         SYMBOL        _RegValue
+  D:0016H         SYMBOL        _RegValue
   -------         DO            
-  D:005DH         SYMBOL        bits
+  D:001AH         SYMBOL        bits
   -------         ENDDO         
-  C:0AFCH         LINE#         306
-  C:0AFCH         LINE#         309
-  C:0B17H         LINE#         310
-  C:0B17H         LINE#         311
-  C:0B17H         LINE#         312
-  C:0B17H         LINE#         313
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 16
+  C:0C5EH         LINE#         306
+  C:0C5EH         LINE#         309
+  C:0C79H         LINE#         310
+  C:0C79H         LINE#         311
+  C:0C79H         LINE#         312
+  C:0C79H         LINE#         313
+  C:0C7CH         LINE#         314
+  C:0C7EH         LINE#         316
+  C:0C7EH         LINE#         317
+  C:0C7EH         LINE#         318
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 16
 
 
-  C:0B1AH         LINE#         314
-  C:0B1CH         LINE#         316
-  C:0B1CH         LINE#         317
-  C:0B1CH         LINE#         318
-  C:0B1CH         LINE#         319
-  C:0B1CH         LINE#         320
-  C:0B1FH         LINE#         321
-  C:0B1FH         LINE#         323
-  C:0B1FH         LINE#         324
-  C:0B1FH         LINE#         326
-  C:0B1FH         LINE#         328
-  C:0B22H         LINE#         330
-  C:0B29H         LINE#         331
-  C:0B2CH         LINE#         332
-  C:0B2CH         LINE#         333
-  C:0B2CH         LINE#         334
-  C:0B35H         LINE#         335
-  C:0B35H         LINE#         336
+  C:0C7EH         LINE#         319
+  C:0C7EH         LINE#         320
+  C:0C81H         LINE#         321
+  C:0C81H         LINE#         323
+  C:0C81H         LINE#         324
+  C:0C81H         LINE#         326
+  C:0C81H         LINE#         328
+  C:0C84H         LINE#         330
+  C:0C8BH         LINE#         331
+  C:0C8EH         LINE#         332
+  C:0C8EH         LINE#         333
+  C:0C8EH         LINE#         334
+  C:0C97H         LINE#         335
+  C:0C97H         LINE#         336
   -------         ENDPROC       _TM7705_WRITEREG
   -------         PROC          _TM7705_READREG
-  D:005EH         SYMBOL        _RegID
+  D:005DH         SYMBOL        _RegID
   -------         DO            
-  D:005FH         SYMBOL        bits
-  D:0060H         SYMBOL        read
+  D:005EH         SYMBOL        bits
+  D:005FH         SYMBOL        read
   -------         ENDDO         
-  C:0907H         LINE#         346
-  C:0909H         LINE#         350
-  C:0925H         LINE#         351
-  C:0925H         LINE#         352
-  C:0925H         LINE#         353
-  C:0925H         LINE#         354
-  C:0928H         LINE#         355
-  C:092AH         LINE#         357
-  C:092AH         LINE#         358
-  C:092AH         LINE#         359
-  C:092AH         LINE#         360
-  C:092AH         LINE#         361
-  C:092DH         LINE#         362
-  C:092FH         LINE#         364
-  C:092FH         LINE#         365
-  C:092FH         LINE#         366
-  C:0936H         LINE#         367
-  C:0936H         LINE#         369
-  C:093EH         LINE#         371
-  C:0943H         LINE#         372
-  C:094BH         LINE#         373
-  C:094DH         LINE#         374
-  C:0952H         LINE#         375
-  C:095EH         LINE#         376
-  C:0960H         LINE#         377
-  C:0960H         LINE#         378
-  C:096BH         LINE#         379
-  C:096BH         LINE#         380
-  C:0973H         LINE#         381
+  C:0A81H         LINE#         346
+  C:0A83H         LINE#         350
+  C:0A9FH         LINE#         351
+  C:0A9FH         LINE#         352
+  C:0A9FH         LINE#         353
+  C:0A9FH         LINE#         354
+  C:0AA2H         LINE#         355
+  C:0AA4H         LINE#         357
+  C:0AA4H         LINE#         358
+  C:0AA4H         LINE#         359
+  C:0AA4H         LINE#         360
+  C:0AA4H         LINE#         361
+  C:0AA7H         LINE#         362
+  C:0AA9H         LINE#         364
+  C:0AA9H         LINE#         365
+  C:0AA9H         LINE#         366
+  C:0AB0H         LINE#         367
+  C:0AB0H         LINE#         369
+  C:0AB8H         LINE#         371
+  C:0ABDH         LINE#         372
+  C:0AC5H         LINE#         373
+  C:0AC7H         LINE#         374
+  C:0ACCH         LINE#         375
+  C:0AD8H         LINE#         376
+  C:0ADAH         LINE#         377
+  C:0ADAH         LINE#         378
+  C:0AE5H         LINE#         379
+  C:0AE5H         LINE#         380
+  C:0AEDH         LINE#         381
   -------         ENDPROC       _TM7705_READREG
   -------         PROC          _TM7705_CALIBSELF
-  D:0036H         SYMBOL        _ch
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 17
+  D:003FH         SYMBOL        _ch
+  C:0E1BH         LINE#         392
+  C:0E1DH         LINE#         393
+  C:0E22H         LINE#         395
+  C:0E24H         LINE#         396
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 17
 
 
-  C:0D11H         LINE#         392
-  C:0D13H         LINE#         393
-  C:0D18H         LINE#         395
-  C:0D1AH         LINE#         396
-  C:0D1AH         LINE#         397
-  C:0D1AH         LINE#         398
-  C:0D1CH         LINE#         400
-  C:0D21H         LINE#         402
-  C:0D26H         LINE#         403
-  C:0D28H         LINE#         404
-  C:0D2BH         LINE#         405
-  C:0D2BH         LINE#         406
+  C:0E24H         LINE#         397
+  C:0E24H         LINE#         398
+  C:0E26H         LINE#         400
+  C:0E2BH         LINE#         402
+  C:0E30H         LINE#         403
+  C:0E32H         LINE#         404
+  C:0E35H         LINE#         405
+  C:0E35H         LINE#         406
   -------         ENDPROC       _TM7705_CALIBSELF
   -------         PROC          _TM7705_SYTEMCALIBZERO
-  D:0077H         SYMBOL        _ch
-  C:0D2CH         LINE#         417
-  C:0D2EH         LINE#         418
-  C:0D33H         LINE#         420
-  C:0D35H         LINE#         421
-  C:0D35H         LINE#         422
-  C:0D35H         LINE#         423
-  C:0D37H         LINE#         424
-  C:0D3CH         LINE#         426
-  C:0D41H         LINE#         427
-  C:0D43H         LINE#         428
-  C:0D46H         LINE#         429
-  C:0D46H         LINE#         430
+  D:001FH         SYMBOL        _ch
+  C:0E36H         LINE#         417
+  C:0E38H         LINE#         418
+  C:0E3DH         LINE#         420
+  C:0E3FH         LINE#         421
+  C:0E3FH         LINE#         422
+  C:0E3FH         LINE#         423
+  C:0E41H         LINE#         424
+  C:0E46H         LINE#         426
+  C:0E4BH         LINE#         427
+  C:0E4DH         LINE#         428
+  C:0E50H         LINE#         429
+  C:0E50H         LINE#         430
   -------         ENDPROC       _TM7705_SYTEMCALIBZERO
   -------         PROC          _TM7705_SYTEMCALIBFULL
-  D:0078H         SYMBOL        _ch
-  C:0CF3H         LINE#         441
-  C:0CF5H         LINE#         442
-  C:0CFAH         LINE#         444
-  C:0CFCH         LINE#         445
-  C:0CFCH         LINE#         446
-  C:0CFCH         LINE#         447
-  C:0CFEH         LINE#         448
-  C:0D03H         LINE#         450
-  C:0D08H         LINE#         451
-  C:0D0DH         LINE#         452
-  C:0D10H         LINE#         453
-  C:0D10H         LINE#         454
+  D:006FH         SYMBOL        _ch
+  C:0DFDH         LINE#         441
+  C:0DFFH         LINE#         442
+  C:0E04H         LINE#         444
+  C:0E06H         LINE#         445
+  C:0E06H         LINE#         446
+  C:0E06H         LINE#         447
+  C:0E08H         LINE#         448
+  C:0E0DH         LINE#         450
+  C:0E12H         LINE#         451
+  C:0E17H         LINE#         452
+  C:0E1AH         LINE#         453
+  C:0E1AH         LINE#         454
   -------         ENDPROC       _TM7705_SYTEMCALIBFULL
   -------         PROC          _TM7705_READADC
-  D:0070H         SYMBOL        _ch
+  D:006BH         SYMBOL        _ch
   -------         DO            
-  D:0071H         SYMBOL        i
-  D:0072H         SYMBOL        read
+  D:006CH         SYMBOL        i
+  D:006DH         SYMBOL        read
   -------         ENDDO         
-  C:0B6AH         LINE#         464
-  C:0B6CH         LINE#         466
-  C:0B71H         LINE#         469
-  C:0B73H         LINE#         470
-  C:0B76H         LINE#         472
-  C:0B7BH         LINE#         473
-  C:0B7DH         LINE#         474
-  C:0B7FH         LINE#         475
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 18
+  C:0C98H         LINE#         464
+  C:0C9AH         LINE#         466
+  C:0C9FH         LINE#         469
+  C:0CA1H         LINE#         470
+  C:0CA4H         LINE#         472
+  C:0CA9H         LINE#         473
+  C:0CABH         LINE#         474
+  C:0CADH         LINE#         475
+  C:0CB2H         LINE#         476
+  C:0CB7H         LINE#         477
+  C:0CB7H         LINE#         479
+  C:0CBEH         LINE#         480
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 18
 
 
-  C:0B84H         LINE#         476
-  C:0B89H         LINE#         477
-  C:0B89H         LINE#         479
-  C:0B90H         LINE#         480
-  C:0B99H         LINE#         481
-  C:0B9DH         LINE#         482
+  C:0CC7H         LINE#         481
+  C:0CCBH         LINE#         482
   -------         ENDPROC       _TM7705_READADC
   -------         ENDMOD        TM7705
 
@@ -1039,112 +1035,118 @@ SYMBOL TABLE OF MODULE:  .\Objects\slave (1602)
   D:00B8H         PUBLIC        IP
   B:0098H.0       PUBLIC        RI
   B:0098H.1       PUBLIC        TI
+  D:0070H         SYMBOL        echo_flag
   D:0099H         PUBLIC        SBUF
   D:0087H         PUBLIC        PCON
-  C:0DA9H         PUBLIC        UART_Init
+  C:0EB6H         PUBLIC        UART_Init
   D:0098H         PUBLIC        SCON
   D:0089H         PUBLIC        TMOD
   D:0088H         PUBLIC        TCON
-  C:0EDBH         PUBLIC        _UART_SendByte
   B:00A8H.3       PUBLIC        ET1
   D:008DH         PUBLIC        TH1
   D:008BH         PUBLIC        TL1
-  C:0EE3H         PUBLIC        UART_GetByte
   B:0088H.6       PUBLIC        TR1
-  C:0C8BH         PUBLIC        _UART_SendStr
   D:00C8H         PUBLIC        T2CON
-  C:0EEEH         PUBLIC        UART_isr
+  C:0FE3H         PUBLIC        _getkey
+  C:100BH         PUBLIC        UART_isr
   D:00D0H         PUBLIC        PSW
+  C:0E51H         PUBLIC        _putchar
   -------         PROC          UART_ISR
-  C:0EEEH         LINE#         8
-  C:0EEEH         LINE#         9
-  C:0EEEH         LINE#         11
-  C:0EEEH         LINE#         12
+  C:100BH         LINE#         10
+  C:100BH         LINE#         11
+  C:100BH         LINE#         13
+  C:100BH         LINE#         14
   -------         ENDPROC       UART_ISR
-  -------         PROC          _UART_SENDBYTE
-  D:0007H         SYMBOL        _data
-  C:0EDBH         LINE#         15
-  C:0EDBH         LINE#         16
-  C:0EDDH         LINE#         17
-  C:0EE0H         LINE#         18
-  C:0EE2H         LINE#         19
-  -------         ENDPROC       _UART_SENDBYTE
-  -------         PROC          UART_GETBYTE
+  -------         PROC          UART_INIT
+  C:0EB6H         LINE#         17
+  C:0EB6H         LINE#         18
+  C:0EB9H         LINE#         19
+  C:0EBCH         LINE#         20
+  C:0EBFH         LINE#         21
+  C:0EC2H         LINE#         22
+  C:0EC5H         LINE#         23
+  C:0EC8H         LINE#         24
+  C:0ECAH         LINE#         25
+  C:0ECCH         LINE#         26
+  C:0ECEH         LINE#         27
+  -------         ENDPROC       UART_INIT
+  -------         PROC          _PUTCHAR
+  D:0007H         SYMBOL        c
+  C:0E51H         LINE#         30
+  C:0E51H         LINE#         31
+  C:0E55H         LINE#         32
+  C:0E58H         LINE#         33
+  C:0E5BH         LINE#         34
+  C:0E5DH         LINE#         35
+  C:0E60H         LINE#         36
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 19
+
+
+  C:0E60H         LINE#         37
+  C:0E63H         LINE#         38
+  C:0E65H         LINE#         39
+  C:0E67H         LINE#         40
+  C:0E67H         LINE#         41
+  C:0E6AH         LINE#         42
+  C:0E6AH         LINE#         43
+  -------         ENDPROC       _PUTCHAR
+  -------         PROC          _GETKEY
   -------         DO            
   D:0007H         SYMBOL        c
   -------         ENDDO         
-  C:0EE3H         LINE#         23
-  C:0EE3H         LINE#         25
-  C:0EE6H         LINE#         26
-  C:0EE8H         LINE#         27
-  C:0EEAH         LINE#         28
-  C:0EEAH         LINE#         29
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 19
-
-
-  -------         ENDPROC       UART_GETBYTE
-  -------         PROC          _UART_SENDSTR
-  D:0074H         SYMBOL        str
-  D:0005H         SYMBOL        len
-  C:0C8BH         LINE#         32
-  C:0C91H         LINE#         33
-  C:0C97H         LINE#         34
-  C:0CACH         LINE#         35
-  C:0CAEH         LINE#         36
-  -------         ENDPROC       _UART_SENDSTR
-  -------         PROC          UART_INIT
-  C:0DA9H         LINE#         39
-  C:0DA9H         LINE#         40
-  C:0DACH         LINE#         41
-  C:0DAFH         LINE#         42
-  C:0DB2H         LINE#         43
-  C:0DB5H         LINE#         44
-  C:0DB8H         LINE#         45
-  C:0DBBH         LINE#         46
-  C:0DBDH         LINE#         47
-  C:0DBFH         LINE#         48
-  -------         ENDPROC       UART_INIT
+  C:0FE3H         LINE#         46
+  C:0FE3H         LINE#         48
+  C:0FE6H         LINE#         49
+  C:0FE8H         LINE#         50
+  C:0FEAH         LINE#         51
+  C:0FEDH         LINE#         52
+  C:0FEDH         LINE#         53
+  -------         ENDPROC       _GETKEY
   -------         ENDMOD        UART
 
+  -------         MODULE        ?C?COPY
+  C:0769H         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
   -------         MODULE        ?C?CLDPTR
-  C:0699H         PUBLIC        ?C?CLDPTR
+  C:078FH         PUBLIC        ?C?CLDPTR
   -------         ENDMOD        ?C?CLDPTR
 
   -------         MODULE        ?C?CSTPTR
-  C:06B2H         PUBLIC        ?C?CSTPTR
+  C:07A8H         PUBLIC        ?C?CSTPTR
   -------         ENDMOD        ?C?CSTPTR
 
   -------         MODULE        ?C?ILDOPTR
-  C:06C4H         PUBLIC        ?C?ILDOPTR
+  C:07BAH         PUBLIC        ?C?ILDOPTR
   -------         ENDMOD        ?C?ILDOPTR
 
   -------         MODULE        ?C?ULSHR
-  C:06FCH         PUBLIC        ?C?ULSHR
+  C:07F2H         PUBLIC        ?C?ULSHR
   -------         ENDMOD        ?C?ULSHR
 
   -------         MODULE        ?C?LSHL
-  C:070FH         PUBLIC        ?C?LSHL
+  C:0805H         PUBLIC        ?C?LSHL
   -------         ENDMOD        ?C?LSHL
 
   -------         MODULE        PRINTF
-  D:0036H         PUBLIC        ?_PRINTF517?BYTE
-  D:0036H         PUBLIC        ?_PRINTF?BYTE
-  D:0036H         PUBLIC        ?_SPRINTF517?BYTE
-  D:0036H         PUBLIC        ?_SPRINTF?BYTE
+  D:0049H         PUBLIC        ?_PRINTF517?BYTE
+  D:0049H         PUBLIC        ?_PRINTF?BYTE
+  D:0049H         PUBLIC        ?_SPRINTF517?BYTE
+  D:0049H         PUBLIC        ?_SPRINTF?BYTE
   C:0088H         PUBLIC        _PRINTF
   C:0088H         PUBLIC        _PRINTF517
   C:0082H         PUBLIC        _SPRINTF
   C:0082H         PUBLIC        _SPRINTF517
   -------         ENDMOD        PRINTF
 
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 20
+
+
   -------         MODULE        SCANF
-  D:0036H         PUBLIC        ?_SCANF517?BYTE
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 20
-
-
-  D:0036H         PUBLIC        ?_SCANF?BYTE
-  D:0036H         PUBLIC        ?_SSCANF517?BYTE
-  D:0036H         PUBLIC        ?_SSCANF?BYTE
+  D:003FH         PUBLIC        ?_SCANF517?BYTE
+  D:003FH         PUBLIC        ?_SCANF?BYTE
+  D:003FH         PUBLIC        ?_SSCANF517?BYTE
+  D:003FH         PUBLIC        ?_SSCANF?BYTE
   C:0404H         PUBLIC        _SCANF
   C:0404H         PUBLIC        _SCANF517
   C:0400H         PUBLIC        _SSCANF
@@ -1152,41 +1154,41 @@ SYMBOL TABLE OF MODULE:  .\Objects\slave (1602)
   -------         ENDMOD        SCANF
 
   -------         MODULE        ?C?CLDOPTR
-  C:0722H         PUBLIC        ?C?CLDOPTR
+  C:0818H         PUBLIC        ?C?CLDOPTR
   -------         ENDMOD        ?C?CLDOPTR
 
   -------         MODULE        ?C?ISTPTR
-  C:074FH         PUBLIC        ?C?ISTPTR
+  C:0845H         PUBLIC        ?C?ISTPTR
   -------         ENDMOD        ?C?ISTPTR
 
   -------         MODULE        ?C?LNEG
-  C:076EH         PUBLIC        ?C?LNEG
+  C:0864H         PUBLIC        ?C?LNEG
   -------         ENDMOD        ?C?LNEG
 
   -------         MODULE        ?C?LSTPTR
-  C:077CH         PUBLIC        ?C?LSTPTR
+  C:0872H         PUBLIC        ?C?LSTPTR
   -------         ENDMOD        ?C?LSTPTR
 
   -------         MODULE        ?C?PLDIDATA
-  C:0796H         PUBLIC        ?C?PLDIDATA
+  C:088CH         PUBLIC        ?C?PLDIDATA
   -------         ENDMOD        ?C?PLDIDATA
 
   -------         MODULE        ?C?PLDIIDATA
-  C:079FH         PUBLIC        ?C?PLDIIDATA
+  C:0895H         PUBLIC        ?C?PLDIIDATA
   -------         ENDMOD        ?C?PLDIIDATA
 
   -------         MODULE        ?C?PILDIDATA
-  C:07AFH         PUBLIC        ?C?PILDIDATA
+  C:08A5H         PUBLIC        ?C?PILDIDATA
   -------         ENDMOD        ?C?PILDIDATA
 
   -------         MODULE        ?C?CCASE
-  C:07BFH         PUBLIC        ?C?CCASE
+  C:08B5H         PUBLIC        ?C?CCASE
   -------         ENDMOD        ?C?CCASE
 
   -------         MODULE        GETCHAR
   B:0021H.2       PUBLIC        ?C?CHARLOADED
-  D:0079H         PUBLIC        ?_UNGETCHAR?BYTE
-  C:0E7BH         PUBLIC        GETCHAR
+  D:0071H         PUBLIC        ?_UNGETCHAR?BYTE
+  C:0FB4H         PUBLIC        GETCHAR
   -------         ENDMOD        GETCHAR
 
   -------         MODULE        UNGETC
@@ -1194,27 +1196,23 @@ SYMBOL TABLE OF MODULE:  .\Objects\slave (1602)
   -------         ENDMOD        UNGETC
 
   -------         MODULE        ISSPACE
-  C:0E12H         PUBLIC        _isspace
+  C:0F4BH         PUBLIC        _isspace
   -------         ENDMOD        ISSPACE
 
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/22/2015  21:48:18  PAGE 21
+
+
   -------         MODULE        ?C?LSTIDATA
-  C:07E5H         PUBLIC        ?C?LSTIDATA
-BL51 BANKED LINKER/LOCATER V6.22                                                      07/21/2015  17:19:02  PAGE 21
-
-
+  C:08DBH         PUBLIC        ?C?LSTIDATA
   -------         ENDMOD        ?C?LSTIDATA
 
   -------         MODULE        ?C?LSTXDATA
-  C:07F1H         PUBLIC        ?C?LSTXDATA
+  C:08E7H         PUBLIC        ?C?LSTXDATA
   -------         ENDMOD        ?C?LSTXDATA
 
   -------         MODULE        ?C?LSTPDATA
-  C:07FDH         PUBLIC        ?C?LSTPDATA
+  C:08F3H         PUBLIC        ?C?LSTPDATA
   -------         ENDMOD        ?C?LSTPDATA
-
-  -------         MODULE        _GETKEY
-  C:0EB1H         PUBLIC        _GETKEY
-  -------         ENDMOD        _GETKEY
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?LCD_CLEAR?1602
@@ -1232,9 +1230,6 @@ SYMBOL TABLE OF MODULE:  .\Objects\slave (1602)
     SEGMENT: ?PR?_IRCVSTR?I2C
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?_MODBUS?MODBUS
-
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_TM7705_WRITEREG?TM7705
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
@@ -1249,11 +1244,5 @@ SYMBOL TABLE OF MODULE:  .\Objects\slave (1602)
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_TM7705_READADC?TM7705
 
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?UART_GETBYTE?UART
-
-*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
-    SEGMENT: ?PR?_UART_SENDSTR?UART
-
-Program Size: data=122.3 xdata=0 code=3823
-LINK/LOCATE RUN COMPLETE.  13 WARNING(S),  0 ERROR(S)
+Program Size: data=114.3 xdata=0 code=4108
+LINK/LOCATE RUN COMPLETE.  10 WARNING(S),  0 ERROR(S)

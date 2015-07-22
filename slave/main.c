@@ -7,6 +7,8 @@
 #include <stdio.h>
 #include <reg52.h>
 
+#define ADDR 0x03
+
 unsigned char ex0_flag = 0; //外部中断INT0的中断标志，2次中断后开始计时
 unsigned char cal_flag = 0; //计算标志位，标志为1时开始计算
 unsigned int count = 0;
@@ -44,8 +46,9 @@ void Timer0_ISR() interrupt 1{
 }
 
 void main() {
-	//unsigned int pData[4];
-	char Str[20];
+	unsigned int pData[4] = 0;
+	unsigned int addr, frc;
+	char buf[17];
 	//unsigned long rotation;
 	UART_Init();
 	TM7705_Init();
@@ -71,9 +74,18 @@ void main() {
 			TL0 = 0;
 			EX0 = 1;
 		} */
-		
+		/*
 		if(scanf("%s", Str)) {
 			printf("Ture");
+		}*/
+		if(scanf ("%s", buf)) {
+			if(buf[0] == ':') {
+				if(sscanf(buf+1, "%2x%2x*", &addr, &frc)) {
+					if(addr == ADDR) {
+						MODBUS(pData, ADDR, frc);
+					}
+				}
+			}
 		}
 	}
 }
