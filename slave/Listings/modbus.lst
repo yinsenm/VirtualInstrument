@@ -1,45 +1,45 @@
-C51 COMPILER V9.54   MODBUS                                                                07/22/2015 21:48:18 PAGE 1   
+C51 COMPILER V9.54   MODBUS                                                                07/23/2015 09:52:13 PAGE 1   
 
 
 C51 COMPILER V9.54, COMPILATION OF MODULE MODBUS
 OBJECT MODULE PLACED IN .\Objects\modbus.obj
-COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE modbus.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\mo
-                    -dbus.lst) TABS(2) OBJECT(.\Objects\modbus.obj)
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE modbus.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\mo
+                    -dbus.lst) OBJECT(.\Objects\modbus.obj)
 
 line level    source
 
    1          /*
-   2            Modbus 串口通信协议
+   2                  Modbus 串口通信协议
    3          */
    4          #include "modbus.h"
    5          #include <stdio.h>
    6          void MODBUS(unsigned int *pData, unsigned int addr, unsigned int frc) {
-   7   1        unsigned char i;
-   8   1        unsigned int temp = LRC(pData, addr, frc);
-   9   1        printf(":");
-  10   1        printf("%02X%02X", addr, frc);
-  11   1        for (i = 0; i < 4; i++) {
-  12   2          printf("%04X ", pData[i]);
-  13   2        }
-  14   1        printf("%02X\n", temp);
+   7   1              unsigned char i;
+   8   1              unsigned int temp = LRC(pData, addr, frc);
+   9   1              printf(":");
+  10   1              printf("%02X%02X", addr, frc);
+  11   1              for (i = 0; i < 4; i++) {
+  12   2                      printf("%04X", pData[i]);
+  13   2              }
+  14   1              printf("%02X\n", temp);
   15   1      }
   16          
   17          unsigned int LRC(unsigned int *pData, unsigned int addr, unsigned int frc) {
-  18   1        unsigned char lrc = 0;
-  19   1        //unsigned int temp = 0;
-  20   1        unsigned char i;
-  21   1        lrc = lrc + (addr%256 + frc%256);
-  22   1        for (i = 0; i < 4; i++) {
-  23   2          lrc = lrc + (pData[i] / 256) + (pData[i] % 256);
-  24   2        }
-  25   1        return ((~lrc) + 1)&0x00FF;
+  18   1              unsigned char lrc = 0;
+  19   1              //unsigned int temp = 0;
+  20   1              unsigned char i;
+  21   1              lrc = lrc + (addr%256 + frc%256);
+  22   1              for (i = 0; i < 4; i++) {
+  23   2                      lrc = lrc + (pData[i] / 256) + (pData[i] % 256);
+  24   2              }
+  25   1              return ((~lrc) + 1)&0x00FF;
   26   1      }
   27          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
    CODE SIZE        =    180    ----
-   CONSTANT SIZE    =     23    ----
+   CONSTANT SIZE    =     22    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
    DATA SIZE        =   ----      19

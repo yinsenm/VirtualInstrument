@@ -9,7 +9,7 @@ void MODBUS(unsigned int *pData, unsigned int addr, unsigned int frc) {
 	printf(":");
 	printf("%02X%02X", addr, frc);
 	for (i = 0; i < 4; i++) {
-		printf("%04X ", pData[i]);
+		printf("%04X", pData[i]);
 	}
 	printf("%02X\n", temp);
 }
