@@ -465,8 +465,8 @@ unsigned short TM7705_ReadAdc(unsigned char _ch) {
 	unsigned char i;
 	unsigned short read = 0;
 
-	/* 为了避免通道切换造成读数失效，读2次 */
-	for (i = 0; i < 2; i++) {
+	/* 为了避免通道切换造成读数失效，读3次 */
+	for (i = 0; i < 3; i++) {
 		TM7705_WaitDRDY();		/* 等待DRDY口线为0 */
 
 		if (_ch == 1) {

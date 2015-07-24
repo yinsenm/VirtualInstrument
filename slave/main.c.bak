@@ -1,12 +1,13 @@
 #include "delay.h"
 #include "tm7705.h"
 // #include "i2c.h"
-// #include "1602.h"
+#include "1602.h"
 #include "uart.h"
 #include "modbus.h"
 #include "speaker.h"
 #include <stdio.h>
 #include <reg52.h>
+#include <math.h>
 
 #define ADDR 0x02
 
@@ -50,13 +51,16 @@ void main() {
 	unsigned int pData[4] = 0;
 	unsigned int addr, frc;
 	char buf[17];
+	//unsigned char temp[16];
 	//unsigned long rotation;
 	UART_Init();
+	LCD_Init();
 	TM7705_Init();
 	EX0_Init();
 	//自校准
 	TM7705_CalibSelf(1);
 	TM7705_CalibSelf(2);
+	LCD_Clear();
 	while(1) {
 		if(scanf ("%s", buf)) {
 			if(buf[0] == ':') {
@@ -71,8 +75,13 @@ void main() {
 								pData[0] = count;
 								pData[1] = 256 * TH0 + TL0;			
 								pData[2] = TM7705_ReadAdc(1);
+								DelayMs(1);
 								pData[3] = TM7705_ReadAdc(2);
 								MODBUS(pData, ADDR, frc); 
+								sprintf(buf, "U %4.3f V %4.3f ", 5.0*pData[2]/65536, 5.0*pData[3]/65536);
+								LCD_Write_Str(0, 0, buf);
+								sprintf(buf, "RPM: %9.4f  ", 5.55*pow(10,7) / (65536 * pData[0] + pData[1]));
+								LCD_Write_Str(0, 1, buf);
 								count = 0;
 								TH0 = 0;
 								TL0 = 0;
@@ -82,20 +91,47 @@ void main() {
 								pData[0] = pData[1] = pData[2] = pData[3] = 0;
 								speaker(4);
 								MODBUS(pData, ADDR, frc);
+								LCD_Write_Str(0, 0, "STEP MOTER LEFT!");
+								LCD_Write_Str(0, 1, "STEP MOTER LEFT!");
 								break;
 							case 4: 
 								pData[0] = pData[1] = pData[2] = pData[3] = 0xFFFF;
 								speaker(4);
 								MODBUS(pData, ADDR, frc);
+								LCD_Write_Str(0, 0, "STEP MOTER RIGHT");
+								LCD_Write_Str(0, 1, "STEP MOTER RIGHT");
+								break;
+							case 5:
+								pData[0] = pData[1] = 0;
+								pData[2] = TM7705_ReadAdc(1);
+								DelayMs(1);
+								pData[3] = TM7705_ReadAdc(2);
+								MODBUS(pData, ADDR, frc);
+								sprintf(buf, "V1 %4.3f V2 %4.3f ", 5.0*pData[2]/65536, 5.0*pData[3]/65536);
+								LCD_Write_Str(0, 0, buf);
+								sprintf(buf, "RPM: NA         ");
+								LCD_Write_Str(0, 1, buf);
 								break;
 							default:
 								pData[0] = pData[1] = pData[2] = pData[3] = 0x1111;
 								MODBUS(pData, ADDR, frc);
+								LCD_Write_Str(0, 0, "UNKNOWN FUNCTION");
+								sprintf(buf, "CHECK NAME: 0x%02X", frc);
+								LCD_Write_Str(0, 1, buf);
 								break;
 						}
+					} 
+					else {
+						LCD_Write_Str(0, 0, "SLAVE NAME 0x02 ");
+						sprintf(buf, "CONNECTED  0x%02X", addr);
+						LCD_Write_Str(0, 1, buf);
 					}
 				}
 			}
-		}
+			else {
+				LCD_Write_Str(0, 0, " MODBUS ERROR!  ");
+				LCD_Write_Str(0, 1, "  ASCII and :   ");
+			}
+		} 
 	}
 }
